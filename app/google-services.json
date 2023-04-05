@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "119247115833",
+    "firebase_url": "https://e-commerce-fcf47-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "e-commerce-fcf47",
+    "storage_bucket": "e-commerce-fcf47.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:119247115833:android:1f1bd0c91bc2bf59085fe8",
+        "android_client_info": {
+          "package_name": "com.example.project03"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "119247115833-kgjfteodhriu9panmit3400dpi2g293s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDzm7iDThwXpuY3rOFGtUOoGcbMRgaCHIk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "119247115833-kgjfteodhriu9panmit3400dpi2g293s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
