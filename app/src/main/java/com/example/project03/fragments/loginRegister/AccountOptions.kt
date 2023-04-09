@@ -1,4 +1,4 @@
-package com.example.project03.fragments.lognRegister
+package com.example.project03.fragments.loginRegister
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
