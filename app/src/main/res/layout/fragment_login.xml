@@ -42,8 +42,9 @@
             android:gravity="center"
             android:text="Let's Login"
             android:textAlignment="center"
-            android:textSize="35sp"
-            app:layout_constraintStart_toStartOf="@id/guidelineLoginLeft"
+            android:textSize="27sp"
+            app:layout_constraintStart_toStartOf="@id/tvAppName"
+            app:layout_constraintEnd_toEndOf="@+id/tvAppName"
             app:layout_constraintTop_toBottomOf="@id/tvAppName" />
 
         <TextView
@@ -55,7 +56,8 @@
             android:text="Don't have an account? Register"
             android:textAlignment="center"
             android:layout_marginTop="15dp"
-            app:layout_constraintStart_toStartOf="@id/guidelineLoginLeft"
+            app:layout_constraintEnd_toEndOf="@+id/tvAppName"
+            app:layout_constraintStart_toStartOf="@+id/tvAppName"
             app:layout_constraintTop_toBottomOf="@id/tvLetsgo" />
 
 
@@ -63,8 +65,8 @@
             android:id="@+id/edEmailLogin"
             style="@style/editText"
             android:layout_width="0dp"
-            android:layout_height="@dimen/edittextHeight"
-            android:layout_marginTop="50dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="15dp"
             android:hint="Email"
             android:inputType="textEmailAddress"
             app:layout_constraintEnd_toEndOf="@id/guidelineLoginRight"
@@ -75,8 +77,8 @@
             android:id="@+id/edPasswordLogin"
             style="@style/editText"
             android:layout_width="0dp"
-            android:layout_height="@dimen/edittextHeight"
-            android:layout_marginTop="50dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="15dp"
             android:hint="Password"
             android:inputType="textPassword"
             app:layout_constraintEnd_toEndOf="@id/guidelineLoginRight"
@@ -135,7 +137,8 @@
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/buttonLoginLogin"
             style="@style/blueButtonStyle"
-            android:layout_width="@dimen/mediumButtonWidth"
+
+            android:layout_width="0dp"
             android:layout_height="@dimen/mediumButtonHeight"
             android:layout_marginTop="15dp"
             android:text="Login"
