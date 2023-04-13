@@ -10,23 +10,43 @@
         android:name="com.example.project03.fragments.shopping.HomeFragment"
         android:label="HomeFragment"
         tools:layout="@layout/fragment_home"
-        />
+        >
+        <action
+            android:id="@+id/action_homeFragment_to_productDetailsFragment"
+            app:destination="@id/productDetailsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/searchFragment"
         android:name="com.example.project03.fragments.shopping.SearchFragment"
         android:label="SearchFragment"
         tools:layout="@layout/fragment_search"
-        />
+        >
+        <action
+            android:id="@+id/action_searchFragment_to_productDetailsFragment"
+            app:destination="@id/productDetailsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/cartFragment"
         android:name="com.example.project03.fragments.shopping.CartFragment"
         android:label="CartFragment"
         tools:layout="@layout/fragment_cart"
-        />
+        >
+        <action
+            android:id="@+id/action_cartFragment_to_productDetailsFragment"
+            app:destination="@id/productDetailsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.example.project03.fragments.shopping.ProfileFragment"
         android:label="ProfileFragment"
         tools:layout="@layout/fragment_profile"
         />
+    <fragment
+        android:id="@+id/productDetailsFragment"
+        android:name="com.example.project03.fragments.shopping.ProductDetailsFragment"
+        android:label="ProductDetailsFragment" >
+        <argument
+            android:name="product"
+            app:argType="com.example.project03.data.Product" />
+    </fragment>
 </navigation>

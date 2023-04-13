@@ -9,4 +9,15 @@
     <dimen name="edittextHeight">60dp</dimen>
     <dimen name="editbuttonHeight">40</dimen>
     <dimen name="editButtonHeight">40dp</dimen>
+    <dimen name="_88sdp">88dp</dimen>
+    <dimen name="_64sdp">64dp</dimen>
+    <dimen name="_16sdp" />
+    <dimen name="_10sdp">10dp</dimen>
+    <dimen name="_80sdp">80dp</dimen>
+    <dimen name="_11sdp">11dp</dimen>
+    <dimen name="_12ssp">12dp</dimen>
+    <dimen name="_8sdp">8dp</dimen>
+    <dimen name="_83sdp">83dp</dimen>
+    <dimen name="_28sdp">28dp</dimen>
+    <dimen name="_20sdp">20dp</dimen>
 </resources>
