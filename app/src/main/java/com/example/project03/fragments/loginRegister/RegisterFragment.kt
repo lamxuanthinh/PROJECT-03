@@ -41,7 +41,7 @@ class RegisterFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.apply {
-            btnLogin.setOnClickListener {
+            btnRegister.setOnClickListener {
                 val user = User(
                     edFirstName.text.toString().trim(),
                     edLastName.text.toString().trim(),
@@ -56,15 +56,15 @@ class RegisterFragment : Fragment() {
             viewModel.register.collect {
                 when (it) {
                     is Resource.Loading -> {
-                        binding.btnLogin.startAnimation()
+                        binding.btnRegister.startAnimation()
                     }
                     is Resource.Success -> {
                         Log.d("test", it.data.toString())
-                        binding.btnLogin.revertAnimation()
+                        binding.btnRegister.revertAnimation()
                     }
                     is Resource.Error -> {
                         Log.e(TAG, it.message.toString())
-                        binding.btnLogin.revertAnimation()
+                        binding.btnRegister.revertAnimation()
                     }
                     else -> {
                         Unit
