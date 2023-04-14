@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import com.example.project03.R
 import com.example.project03.data.User
 import com.example.project03.databinding.FragmentRegisterBinding
@@ -39,6 +40,10 @@ class RegisterFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        binding.tvDontHaveAnAccount.setOnClickListener {
+            findNavController().navigate(R.id.action_registerFragment2_to_loginFragment3)
+        }
 
         binding.apply {
             btnRegister.setOnClickListener {
