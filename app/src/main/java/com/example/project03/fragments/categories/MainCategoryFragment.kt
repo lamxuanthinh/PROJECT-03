@@ -23,6 +23,7 @@ import com.example.project03.util.showBottomNavigationView
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
 
+
 private val TAG="MainCategoryFragment"
 
 @AndroidEntryPoint
@@ -75,7 +76,7 @@ class MainCategoryFragment: Fragment(R.layout.fragment_main_category) {
                         showLoading()
                     }
                     is Resource.Success->{
-                        specialProductsAdapter.differ.currentList(it.data)
+                        specialProductsAdapter.differ.submitList(it.data)
                         hideLoading()
 
                     }

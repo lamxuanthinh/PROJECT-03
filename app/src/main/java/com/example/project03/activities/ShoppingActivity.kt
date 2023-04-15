@@ -7,6 +7,8 @@ import androidx.navigation.ui.setupWithNavController
 import com.example.project03.R
 import com.example.project03.databinding.ActivityShoppingBinding
 import dagger.hilt.android.AndroidEntryPoint
+import dagger.hilt.android.HiltAndroidApp
+import dagger.hilt.android.lifecycle.HiltViewModel
 
 @AndroidEntryPoint
 class ShoppingActivity : AppCompatActivity() {

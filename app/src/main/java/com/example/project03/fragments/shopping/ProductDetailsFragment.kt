@@ -10,6 +10,9 @@ import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.project03.R
 import com.example.project03.activities.ShoppingActivity
+import com.example.project03.adapters.ColorsAdapter
+import com.example.project03.adapters.SizeAdapter
+import com.example.project03.adapters.ViewPager2Images
 import com.example.project03.databinding.FragmentProductDetailsBinding
 import com.example.project03.util.hideBottomNavigationView
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -18,9 +21,9 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 class ProductDetailsFragment:Fragment() {
     private val args by navArgs<ProductDetailsFragmentArgs>()
     private lateinit var bingding:FragmentProductDetailsBinding
-    private val viewPageAdapter by lazy{ViewPager2Image}
-    private val sizesAdapter by lazy{SizeAdapter}
-    private val colorsAdapter by lazy{ColorAdapter}
+    private val viewPageAdapter by lazy{ViewPager2Images()}
+    private val sizesAdapter by lazy{ SizeAdapter() }
+    private val colorsAdapter by lazy{ColorsAdapter()}
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -65,7 +68,7 @@ class ProductDetailsFragment:Fragment() {
 
     private fun setupViewpager() {
         bingding.apply {
-            viewPagerProductImages.adaper=viewPageAdapter
+            viewPagerProductImages.adapter=viewPageAdapter
         }
     }
 
