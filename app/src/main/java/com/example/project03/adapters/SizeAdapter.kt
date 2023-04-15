@@ -70,5 +70,5 @@ class SizeAdapter: RecyclerView.Adapter<SizeAdapter.SizesViewHolder>() {
             onItemClick?.invoke(size)
         }
     }
-    var onItemClick: ((String) -> UInt)? = null
+    var onItemClick: ((String) -> Unit)? = null
 }
