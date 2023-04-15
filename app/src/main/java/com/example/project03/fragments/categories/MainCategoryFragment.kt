@@ -4,7 +4,6 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -18,7 +17,6 @@ import com.example.project03.adapters.BestProductsAdapter
 import com.example.project03.adapters.SpecialProductsAdapter
 import com.example.project03.databinding.FragmentMainCategoryBinding
 import com.example.project03.viewmodel.MainCategoryViewModel
-import com.example.project03.util.Resource
 import com.example.project03.util.showBottomNavigationView
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest

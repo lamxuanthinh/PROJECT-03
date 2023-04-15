@@ -8,14 +8,8 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.project03.R
-import com.example.project03.activities.ShoppingActivity
-import com.example.project03.adapters.ColorsAdapter
-import com.example.project03.adapters.SizeAdapter
-import com.example.project03.adapters.ViewPager2Images
 import com.example.project03.databinding.FragmentProductDetailsBinding
 import com.example.project03.util.hideBottomNavigationView
-import com.google.android.material.bottomnavigation.BottomNavigationView
 
 
 class ProductDetailsFragment:Fragment() {

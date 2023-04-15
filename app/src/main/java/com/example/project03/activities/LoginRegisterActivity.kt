@@ -8,12 +8,3 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 
 
 private lateinit var binding: ActivityLoginRegisterBinding
-@AndroidEntryPoint
-class LoginRegisterActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        binding = ActivityLoginRegisterBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-
-    }
-}
