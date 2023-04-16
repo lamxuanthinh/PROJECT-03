@@ -33,6 +33,7 @@ class ProductDetailsFragment:Fragment() {
     private var selectedColor:Int?=null
     private var selectedSize:String?=null
     private val viewModel by viewModels<DetailsviewModel>()
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,

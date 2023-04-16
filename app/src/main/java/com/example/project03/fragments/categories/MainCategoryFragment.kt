@@ -16,6 +16,7 @@ import com.example.project03.adapters.BestDealsAdapter
 import com.example.project03.adapters.BestProductsAdapter
 import com.example.project03.adapters.SpecialProductsAdapter
 import com.example.project03.databinding.FragmentMainCategoryBinding
+import com.example.project03.util.Resource
 import com.example.project03.viewmodel.MainCategoryViewModel
 import com.example.project03.util.showBottomNavigationView
 import dagger.hilt.android.AndroidEntryPoint
