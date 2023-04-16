@@ -2,6 +2,7 @@ package com.example.project03.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.project03.data.CartProduct
 import com.example.project03.firebase.FirebaseCommon
 import com.example.project03.util.Resource
 import com.google.firebase.auth.FirebaseAuth

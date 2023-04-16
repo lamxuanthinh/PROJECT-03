@@ -1,5 +1,6 @@
 package com.example.project03.firebase
 
+import com.example.project03.data.CartProduct
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 
@@ -8,7 +9,7 @@ class FirebaseCommon(
     private val auth:FirebaseAuth
 ) {
     private val cartColection= firestore.collection("user").document(auth.uid!!).collection("cart")
-    fun addProductToCart(cartProduct: CartProduct,onResult:(CartProduct?,Exception?) ->  Unit){
+    fun addProductToCart(cartProduct: CartProduct, onResult:(CartProduct?, Exception?) ->  Unit){
         cartColection.document().set(cartProduct)
             .addOnSuccessListener {
                 onResult(cartProduct,null)
