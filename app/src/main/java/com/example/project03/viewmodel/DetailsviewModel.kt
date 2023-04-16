@@ -58,7 +58,7 @@ class DetailsviewModel @Inject constructor(
         }
     }
     fun increaseQuantity(documentId: String,cartProduct: CartProduct){
-        firebaseCommon.increaseQuality(documentId){_,e->
+        firebaseCommon.increaseQuantity(documentId){_,e->
             viewModelScope.launch {
                 if(e==null){
                     _addToCart.emit(Resource.Success(cartProduct!!))
