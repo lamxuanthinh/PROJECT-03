@@ -105,6 +105,7 @@
             android:id="@+id/totalBoxContainer"
             android:background="@drawable/total_box_background"
             app:layout_constraintStart_toStartOf="@id/leftGuideLine"
+            app:layout_constraintEnd_toEndOf="@id/rightGuideLine"
             app:layout_constraintTop_toBottomOf="@id/bottomGuideLine"
             android:layout_marginTop="50dp">
 
@@ -125,10 +126,11 @@
 
 
             <TextView
+                android:id="@+id/tvTotalPrice"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
-                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
                 android:layout_marginBottom="15dp"
                 android:fontFamily="@font/sf_pro_display"
                 android:text="$150"
