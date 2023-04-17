@@ -14,8 +14,10 @@ import androidx.navigation.fragment.findNavController
 import com.example.project03.R
 import com.example.project03.activities.ShoppingActivity
 import com.example.project03.databinding.FragmentLoginBinding
+import com.example.project03.dialog.setupBottomSheetDialog
 import com.example.project03.viewmodel.LoginViewModel
 import com.example.project03.util.Resource
+import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 
 
@@ -46,6 +48,31 @@ class LoginFragment : Fragment() {
             }
         }
 
+        binding.tvForgotPasswordLogin.setOnClickListener {
+            setupBottomSheetDialog { email ->
+                viewModel.resetPassword(email)
+            }
+        }
+
+        lifecycleScope.launchWhenStarted {
+            viewModel.resetPassword.collect {
+                when (it) {
+                    is Resource.Loading -> {}
+                    is Resource.Success -> {
+                        Snackbar.make(
+                            requireView(), "Reset link was send to your Email", Snackbar.LENGTH_LONG
+                        ).show()
+                    }
+                    is Resource.Error -> {
+                        Snackbar.make(requireView(), "Error : ${it.message}", Snackbar.LENGTH_LONG)
+                            .show()
+                    }
+                    else -> Unit
+                }
+            }
+        }
+
+
         lifecycleScope.launchWhenStarted {
             viewModel.login.collect {
                 when (it) {
@@ -67,5 +94,6 @@ class LoginFragment : Fragment() {
                 }
             }
         }
+
     }
 }
