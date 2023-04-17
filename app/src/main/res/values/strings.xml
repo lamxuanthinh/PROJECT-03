@@ -4,4 +4,13 @@
     <string name="qulity">It is now very easy to reach the\nbest quality among the\nproducts on the internet!</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="g_save">SAVE</string>
+    <string name="g_delete">DELETE</string>
+    <string name="g_phone">Phone</string>
+    <string name="g_state">State</string>
+    <string name="g_city">City</string>
+    <string name="g_full_name">Name</string>
+    <string name="street">Street</string>
+    <string name="g_address_location_ie_home">Address Location</string>
+    <string name="g_address">Address</string>
 </resources>

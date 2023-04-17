@@ -49,4 +49,13 @@
             android:name="product"
             app:argType="com.example.project03.data.Product" />
     </fragment>
+    <fragment
+        android:id="@+id/addressFragment"
+        android:name="com.example.project03.fragments.shopping.AddressFragment"
+        android:label="fragment_address"
+        tools:layout="@layout/fragment_address" >
+        <action
+            android:id="@+id/action_addressFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
 </navigation>
