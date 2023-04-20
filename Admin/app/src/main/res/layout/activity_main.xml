@@ -4,67 +4,77 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
     tools:context=".MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <ProgressBar
+            android:id="@+id/progressbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:visibility="invisible"
+            />
+
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:id="@+id/productsInfo"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
             android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
             android:orientation="vertical"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent">
+            app:layout_constraintTop_toTopOf="parent">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Product general information:"
+                android:textColor="@color/black"
                 android:textSize="18sp"
-                android:textStyle="bold"
-                android:textColor="@color/black" />
+                android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/edName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Name"
-                android:layout_marginTop="10dp"/>
+                android:layout_marginTop="10dp"
+                android:hint="Name" />
 
 
             <EditText
                 android:id="@+id/edCategory"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Category"/>
+                android:hint="Category" />
 
             <EditText
                 android:id="@+id/edDescription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Product description (Optional)"
-                />
+                android:hint="Product description (Optional)" />
 
             <EditText
                 android:id="@+id/edPrice"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Price"
-                android:inputType="number"/>
+                android:inputType="numberDecimal" />
 
             <EditText
                 android:id="@+id/offerPercentage"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Offer Percentage (Optional)"
-                android:inputType="number"/>
+                android:inputType="numberDecimal" />
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -72,73 +82,74 @@
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/productsInfo"
-            app:layout_constraintStart_toStartOf="@id/productsInfo"
-            app:layout_constraintEnd_toEndOf="@id/productsInfo"
             android:layout_marginTop="20dp"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="@id/productsInfo"
+            app:layout_constraintStart_toStartOf="@id/productsInfo"
+            app:layout_constraintTop_toBottomOf="@id/productsInfo">
 
             <TextView
+                android:id="@+id/edProductDetails"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Product details:"
+                android:textColor="@color/black"
                 android:textSize="18sp"
-                android:textStyle="bold"
-                android:textColor="@color/black" />
+                android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/edSizes"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Sizes (Optional) | use , between each new size"
-                android:inputType="number"/>
+                android:inputType="text" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
+
                 <Button
                     android:id="@+id/buttonColorPicker"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
                     android:text="Colors"
-                    android:textSize="14sp"
-                    android:layout_marginTop="10dp"/>
+                    android:textSize="14sp" />
+
                 <TextView
                     android:id="@+id/tvSelectedColors"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:textSize="14sp"
+                    android:layout_marginStart="20dp"
                     android:gravity="center"
-                    android:layout_marginStart="20dp"/>
+                    android:textSize="14sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
+
                 <Button
                     android:id="@+id/buttonImagesPicker"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
                     android:text="Images"
-                    android:textSize="14sp"
-                    android:layout_marginTop="10dp"/>
+                    android:textSize="14sp" />
+
                 <TextView
                     android:id="@+id/tvSelectedImages"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:textSize="14sp"
+                    android:layout_marginStart="20dp"
                     android:gravity="center"
-                    android:layout_marginStart="20dp"/>
+                    android:textSize="14sp" />
             </LinearLayout>
 
 
         </LinearLayout>
-
-
-
-
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
