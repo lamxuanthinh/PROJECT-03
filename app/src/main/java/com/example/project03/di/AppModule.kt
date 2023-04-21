@@ -1,5 +1,6 @@
 package com.example.project03.di
 
+import com.example.project03.data.Category
 import com.example.project03.firebase.FirebaseCommon
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
@@ -33,4 +34,7 @@ AppModule {
     @Provides
     @Singleton
     fun providesStorage()=FirebaseStorage.getInstance().reference
+
+
+
 }

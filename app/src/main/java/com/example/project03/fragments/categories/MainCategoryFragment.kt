@@ -89,6 +89,26 @@ class MainCategoryFragment: Fragment(R.layout.fragment_main_category) {
                 }
             }
         }
+        lifecycleScope.launchWhenStarted {
+            viewModel.bestProducts.collectLatest {
+                when(it){
+                    is Resource.Loading->{
+                        showLoading()
+                    }
+                    is Resource.Success->{
+                        bestProductsAdapter.differ.submitList(it.data)
+                        hideLoading()
+
+                    }
+                    is Resource.Error->{
+                        hideLoading()
+                        Log.e(TAG,it.message.toString())
+                        Toast.makeText(requireContext(), it.message, Toast.LENGTH_SHORT).show()
+                    }
+                    else -> Unit
+                }
+            }
+        }
 
         lifecycleScope.launchWhenStarted {
             viewModel.bestDealProducts.collectLatest {
