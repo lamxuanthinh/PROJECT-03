@@ -56,7 +56,7 @@ class MainCategoryViewModel @Inject constructor(
             _bestDealProducts.emit(Resource.Loading())
         }
         firestore.collection("Products")
-            .whereEqualTo("category", "Best Deal ").get().addOnSuccessListener { result ->
+            .whereEqualTo("category", "Best Deal").get().addOnSuccessListener { result ->
                 val bestDealProducts = result.toObjects(Product::class.java)
                 viewModelScope.launch {
                     _bestDealProducts.emit(Resource.Success(bestDealProducts))
