@@ -25,4 +25,9 @@
     <dimen name="_45sdp">45dp</dimen>
     <dimen name="_1sdp">1dp</dimen>
     <dimen name="_15ssp">15sp</dimen>
+    <dimen name="_43sdp">43dp</dimen>
+    <dimen name="_2sdp">2sd</dimen>
+    <dimen name="_15sdp">15sd</dimen>
+    <dimen name="_30sdp">30dp</dimen>
+    <dimen name="_10ssp">10sd</dimen>
 </resources>

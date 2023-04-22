@@ -13,4 +13,15 @@
     <string name="street">Street</string>
     <string name="g_address_location_ie_home">Address Location</string>
     <string name="g_address">Address</string>
+    <string name="g_settings">Setting</string>
+    <string name="g_edit_personal_details">name</string>
+    <string name="g_orders">Order</string>
+    <string name="g_all_orders">All orders</string>
+    <string name="g__track_order">Track order</string>
+    <string name="g_billing">Billing</string>
+    <string name="g_notifications">Notification</string>
+    <string name="g_regional">Regional</string>
+    <string name="g_language">Language</string>
+    <string name="help">Help</string>
+    <string name="g_logout">Logout</string>
 </resources>
