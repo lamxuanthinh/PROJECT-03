@@ -14,7 +14,6 @@ import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kelineyt.adapters.BillingProductsAdapter
-import com.example.kelineyt.viewmodel.BillingViewModel
 import com.example.project03.R
 import com.example.project03.adapters.AddressAdapter
 import com.example.project03.data.CartProduct
@@ -23,6 +22,7 @@ import com.example.project03.databinding.FragmentCartBinding
 import com.example.project03.databinding.SizeRvItemBinding
 import com.example.project03.util.HorizontalItemDecoration
 import com.example.project03.util.Resource
+import com.example.project03.viewmodel.BillingViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
 
