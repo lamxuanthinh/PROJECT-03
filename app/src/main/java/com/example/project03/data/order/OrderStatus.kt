@@ -8,4 +8,5 @@ sealed class OrderStatus(val status: String) {
     object Shipped:OrderStatus("Shipped")
     object Delivered:OrderStatus("Delivered")
     object Returned:OrderStatus("Returned")
+
 }
