@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/shopping_graph"
-    app:startDestination="@id/addressFragment">
+    app:startDestination="@id/homeFragment">
 
     <fragment
         android:id="@+id/homeFragment"
@@ -51,7 +51,9 @@
     <fragment
         android:id="@+id/productDetailsFragment"
         android:name="com.example.project03.fragments.shopping.ProductDetailsFragment"
-        android:label="ProductDetailsFragment" >
+        android:label="ProductDetailsFragment"
+        tools:layout="@layout/fragment_product_details"
+        >
         <argument
             android:name="product"
             app:argType="com.example.project03.data.Product" />

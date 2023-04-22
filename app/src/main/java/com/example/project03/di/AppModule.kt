@@ -1,7 +1,10 @@
 package com.example.project03.di
 
+import android.app.Application
+import android.content.Context.MODE_PRIVATE
 import com.example.project03.data.Category
 import com.example.project03.firebase.FirebaseCommon
+import com.example.project03.util.Constants.INTRODUCTION_SP
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
@@ -16,8 +19,7 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-object
-AppModule {
+object AppModule {
 
     @Provides
     @Singleton
@@ -29,12 +31,16 @@ AppModule {
 
     @Provides
     @Singleton
-    fun provideFirebaseCommon(firebaseAuth: FirebaseAuth,firestore: FirebaseFirestore)=FirebaseCommon(firestore,firebaseAuth)
+    fun provideFirebaseCommon(firebaseAuth: FirebaseAuth, firestore: FirebaseFirestore) =
+        FirebaseCommon(firestore, firebaseAuth)
 
     @Provides
     @Singleton
-    fun providesStorage()=FirebaseStorage.getInstance().reference
+    fun providesStorage() = FirebaseStorage.getInstance().reference
 
-
+    @Provides
+    fun provideIntroductionSP(
+        application: Application
+    ) = application.getSharedPreferences(INTRODUCTION_SP, MODE_PRIVATE)
 
 }
