@@ -14,8 +14,8 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.kelineyt.adapters.BillingProductsAdapter
-import com.example.kelineyt.viewmodel.BillingViewModel
+import com.example.project03.adapters.BillingProductsAdapter
+
 import com.example.project03.R
 import com.example.project03.adapters.AddressAdapter
 import com.example.project03.data.Address
@@ -25,6 +25,7 @@ import com.example.project03.data.order.OrderStatus
 import com.example.project03.databinding.FragmentBilldingBinding
 import com.example.project03.util.HorizontalItemDecoration
 import com.example.project03.util.Resource
+import com.example.project03.viewmodel.BillingViewModel
 import com.example.project03.viewmodel.OrderViewModel
 import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
@@ -36,7 +37,7 @@ class BillingFragment: Fragment() {
 
     private val addressAdapter by lazy { AddressAdapter() }
     private val billingProductsAdapter by lazy { BillingProductsAdapter() }
-    private  val billingViewModel by viewModels<BillingViewModel>()
+    val billingViewModel by viewModels<BillingViewModel>()
     private val args by navArgs<BillingFragmentArgs>()
     private var product = emptyList<CartProduct>()
     private var totalPrice = 0f

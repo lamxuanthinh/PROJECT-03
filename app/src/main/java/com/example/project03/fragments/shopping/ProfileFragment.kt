@@ -44,11 +44,10 @@ class ProfileFragment: Fragment() {
             findNavController().navigate(R.id.action_profileFragment_to_userAccountFragment)
         }
         binding.linearOrders.setOnClickListener {
-            findNavController().navigate(R.id.action_profileFragment_to_orderFragment)
+//            findNavController().navigate(R.id.action_profileFragment_to_orderFragment)
         }
         binding.linearBilling.setOnClickListener {
-            val action = ProfireFragmentDirections.actionProfileFragmentToBillingFragment(
-                0f,
+            val action = ProfileFragmentDirections.actionProfileFragmentToBillingFragment(0f,
                 emptyArray()
             )
             findNavController().navigate(action)
@@ -58,7 +57,7 @@ class ProfileFragment: Fragment() {
             viewModel.logout()
             val intent = Intent(requireActivity(), LoginRegisterActivity::class.java)
             startActivity(intent)
-            findNavController().navigate(action)
+            requireActivity().finish()
         }
         binding.tvVersionCode.text = "Version ${BuildConfig.VERSION_CODE}"
         lifecycleScope.launchWhenStarted {
