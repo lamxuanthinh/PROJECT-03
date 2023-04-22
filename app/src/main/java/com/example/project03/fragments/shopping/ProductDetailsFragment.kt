@@ -43,8 +43,10 @@ class ProductDetailsFragment:Fragment() {
         bingding=FragmentProductDetailsBinding.inflate(inflater)
         return bingding.root
     }
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
         val product = args.product
         setupSizesRv()
         setupColorsRv()

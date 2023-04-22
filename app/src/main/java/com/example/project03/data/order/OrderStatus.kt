@@ -1,6 +1,6 @@
 package com.example.project03.data.order
 
-sealed class OrderStatus(val string: String) {
+sealed class OrderStatus(val status: String) {
 
     object Ordered:OrderStatus("Ordered")
     object Canceled:OrderStatus("Canceled")
