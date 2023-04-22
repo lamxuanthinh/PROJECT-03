@@ -12,7 +12,8 @@
         tools:layout="@layout/fragment_introduction" >
         <action
             android:id="@+id/action_introductionFragment_to_accountOptions"
-            app:destination="@id/accountOptions" />
+            app:destination="@id/accountOptions"
+            app:enterAnim="@anim/from_bottom" />
     </fragment>
     <fragment
         android:id="@+id/accountOptions"
@@ -21,9 +22,17 @@
         tools:layout="@layout/fragment_account_options" >
         <action
             android:id="@+id/action_accountOptions_to_loginFragment"
-            app:destination="@id/loginFragment" />
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
         <action
             android:id="@+id/action_accountOptions_to_registerFragment2"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
             app:destination="@id/registerFragment2" />
     </fragment>
     <fragment
@@ -33,15 +42,23 @@
         tools:layout="@layout/fragment_login" >
         <action
             android:id="@+id/action_loginFragment_to_registerFragment22"
-            app:destination="@id/registerFragment2" />
+            app:destination="@id/registerFragment2"
+            app:enterAnim="@anim/from_bottom"
+            app:exitAnim="@anim/to_left" />
     </fragment>
     <fragment
         android:id="@+id/registerFragment2"
+        app:popEnterAnim="@anim/from_left"
+        app:popExitAnim="@anim/to_right"
         android:name="com.example.project03.fragments.loginRegister.RegisterFragment"
         android:label="RegisterFragment"
         tools:layout="@layout/fragment_register">
         <action
             android:id="@+id/action_registerFragment2_to_loginFragment3"
-            app:destination="@id/loginFragment" />
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/from_bottom"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            app:exitAnim="@anim/to_left" />
     </fragment>
 </navigation>

@@ -5,6 +5,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
@@ -66,6 +67,9 @@ class RegisterFragment : Fragment() {
                     is Resource.Success -> {
                         Log.d("test", it.data.toString())
                         binding.btnRegister.revertAnimation()
+                        Toast.makeText(context, "Register Successfully", Toast.LENGTH_LONG).show()
+                        findNavController().navigate(R.id.loginFragment)
+
                     }
                     is Resource.Error -> {
                         Log.e(TAG, it.message.toString())
@@ -80,15 +84,15 @@ class RegisterFragment : Fragment() {
 
         lifecycleScope.launchWhenStarted {
             viewModel.validation.collect { validation ->
-                if(validation.email is RegisterValidation.Failed){
-                    withContext(Dispatchers.Main){
+                if (validation.email is RegisterValidation.Failed) {
+                    withContext(Dispatchers.Main) {
                         binding.edEmail.apply {
                             requestFocus()
                             error = validation.email.message
                         }
                     }
                 }
-                if (validation.password is RegisterValidation.Failed){
+                if (validation.password is RegisterValidation.Failed) {
                     withContext(Dispatchers.Main) {
                         binding.edPassword.apply {
                             requestFocus()
