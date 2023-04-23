@@ -77,4 +77,8 @@
             android:name="products"
             app:argType="com.example.project03.data.CartProduct[]" />
     </fragment>
+    <fragment
+        android:id="@+id/orderDetailFragment"
+        android:name="com.example.project03.fragments.settings.OrderDetailFragment"
+        android:label="OrderDetailFragment" />
 </navigation>
