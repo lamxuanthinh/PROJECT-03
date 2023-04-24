@@ -52,6 +52,7 @@ class UserAccountFragment:Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         lifecycleScope.launchWhenStarted {
             viewModel.user.collectLatest {
                 when(it){
@@ -92,6 +93,9 @@ class UserAccountFragment:Fragment() {
         binding.tvUpdatePassword.setOnClickListener {
             setupBottomSheetDialog {  }
         }
+        binding.imageCloseUserAccount.setOnClickListener {
+            findNavController().navigateUp()
+        }
         binding.buttonSave.setOnClickListener {
             binding.apply {
                 val fistName= edFirstName.text.toString().trim()
@@ -118,7 +122,6 @@ class UserAccountFragment:Fragment() {
     }
 
     private fun hideUserLoading() {
-        TODO("Not yet implemented")
         binding.apply {
             progressbarAccount.visibility=View.GONE
             imageUser.visibility=View.VISIBLE

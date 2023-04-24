@@ -12,19 +12,19 @@ import com.example.project03.databinding.ColorRvItemBinding
 
 class ColorsAdapter:RecyclerView.Adapter<ColorsAdapter.ColorsViewHolder>() {
     private var selectedPosition = -1
-    inner class ColorsViewHolder(private val binding: ColorRvItemBinding) : ViewHolder(binding.root)
+    inner class ColorsViewHolder(private val binding:ColorRvItemBinding) : ViewHolder(binding.root)
     {
         fun bind(color: Int, position: Int){
             val imageDrawable = ColorDrawable(color)
             binding.imageColor.setImageDrawable(imageDrawable)
             if (position == selectedPosition){// color is selected
                 binding.apply {
-                    imageShadow.visibility = View.VISIBLE
                     imagePicked.visibility = View.VISIBLE
+//                    ima.visibility = View.VISIBLE
                 }
             } else{ // color is selected
                 binding.apply {
-                imageShadow.visibility = View.INVISIBLE
+//                i.visibility = View.INVISIBLE
                 imagePicked.visibility = View.INVISIBLE
                 }
             }

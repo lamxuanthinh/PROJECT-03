@@ -14,7 +14,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.kelineyt.adapters.BillingProductsAdapter
+import com.example.project03.adapters.BillingProductsAdapter
 import com.example.project03.R
 import com.example.project03.adapters.AddressAdapter
 import com.example.project03.data.Address
@@ -36,7 +36,7 @@ class BillingFragment: Fragment() {
 
     private val addressAdapter by lazy { AddressAdapter() }
     private val billingProductsAdapter by lazy { BillingProductsAdapter() }
-    private  val billingViewModel by viewModels<BillingViewModel>()
+    val billingViewModel by viewModels<BillingViewModel>()
     private val args by navArgs<BillingFragmentArgs>()
     private var product = emptyList<CartProduct>()
     private var totalPrice = 0f
@@ -66,7 +66,9 @@ class BillingFragment: Fragment() {
         binding.imageAddAddress.setOnClickListener {
             findNavController().navigate(R.id.action_billingFragment_to_addressFragment)
         }
-
+        binding.imageCloseBilling.setOnClickListener {
+            findNavController().navigateUp()
+        }
         lifecycleScope.launchWhenStarted {
             billingViewModel.address.collectLatest {
                 when(it){

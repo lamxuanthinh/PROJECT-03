@@ -5,10 +5,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.kelineyt.adapters.BillingProductsAdapter
+import com.example.project03.adapters.BillingProductsAdapter
 import com.example.project03.data.order.OrderStatus
 import com.example.project03.data.order.getOrderStatus
 import com.example.project03.databinding.FragmentOrderDetailBinding
@@ -66,6 +67,9 @@ class OrderDetailFragment: Fragment() {
         }
 
         billingProductsAdapter.differ.submitList(order.products)
+        binding.imgCloseOrder.setOnClickListener {
+            findNavController().navigateUp()
+        }
     }
 
     private fun setupOrderRv() {

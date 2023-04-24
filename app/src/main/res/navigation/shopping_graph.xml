@@ -47,6 +47,22 @@
         <action
             android:id="@+id/action_profileFragment_to_addressFragment"
             app:destination="@id/addressFragment" />
+
+        <argument
+            android:name="totalPrice"
+            app:argType="float" />
+        <argument
+            android:name="products"
+            app:argType="com.example.project03.data.CartProduct[]" />
+        <action
+            android:id="@+id/action_profileFragment_to_userAccountFragment"
+            app:destination="@id/userAccountFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_ordersFragment"
+            app:destination="@id/ordersFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_billingFragment"
+            app:destination="@id/billingFragment" />
     </fragment>
     <fragment
         android:id="@+id/productDetailsFragment"
@@ -82,7 +98,8 @@
     <fragment
         android:id="@+id/orderDetailFragment"
         android:name="com.example.project03.fragments.settings.OrderDetailFragment"
-        android:label="OrderDetailFragment" >
+        android:label="OrderDetailFragment"
+        tools:layout="@layout/fragment_order_detail">
         <argument
             android:name="order"
             app:argType="com.example.project03.data.order.Order" />
@@ -90,10 +107,17 @@
     <fragment
         android:id="@+id/ordersFragment"
         android:name="com.example.project03.fragments.settings.OrdersFragment"
-        android:label="OrdersFragment" >
+        android:label="OrdersFragment"
+        tools:layout="@layout/fragment_orders">
         <action
             android:id="@+id/action_ordersFragment_to_orderDetailFragment"
             app:destination="@id/orderDetailFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/userAccountFragment"
+        android:name="com.example.project03.fragments.settings.UserAccountFragment"
+        android:label="UserAccountFragment"
+        tools:layout="@layout/fragment_user_account"/>
+
 
 </navigation>

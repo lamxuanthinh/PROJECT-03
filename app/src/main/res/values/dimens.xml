@@ -1,5 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+<!--    <dimen name="tvRightAddressMargin">115dp</dimen>-->
+<!--    <dimen name="smallButtonWidth">130dp</dimen>-->
+<!--    <dimen name="smallButtonHeight">55dp</dimen>-->
+<!--    <dimen name="buttonCorners">5dp</dimen>-->
+<!--    <dimen name="mediumButtonWidth">200dp</dimen>-->
+<!--    <dimen name="mediumButtonHeight">55dp</dimen>-->
+<!--    <dimen name="edittextHeight">60dp</dimen>-->
+<!--    <dimen name="editbuttonHeight">40</dimen>-->
+<!--    <dimen name="editButtonHeight">40dp</dimen>-->
+<!--    <dimen name="_88sdp">88dp</dimen>-->
+<!--    <dimen name="_64sdp">64dp</dimen>-->
+<!--    <dimen name="_16sdp" />-->
+<!--    <dimen name="_10sdp">10dp</dimen>-->
+<!--    <dimen name="_80sdp">80sp</dimen>-->
+<!--    <dimen name="_11sdp">11dp</dimen>-->
+<!--    <dimen name="_12ssp">12dp</dimen>-->
+<!--    <dimen name="_8sdp">8dp</dimen>-->
+<!--    <dimen name="_83sdp">83dp</dimen>-->
+<!--    <dimen name="_28sdp">28dp</dimen>-->
+<!--    <dimen name="_20sdp">20dp</dimen>-->
+<!--    <dimen name="_12sdp">12dp</dimen>-->
+<!--    <dimen name="_40sdp">40dp</dimen>-->
+<!--    <dimen name="_45sdp">45dp</dimen>-->
+<!--    <dimen name="_1sdp">1dp</dimen>-->
+<!--    <dimen name="_15ssp">15sp</dimen>-->
+<!--    <dimen name="_43sdp">43dp</dimen>-->
+<!--    <dimen name="_2sdp">2sd</dimen>-->
+<!--    <dimen name="_15sdp">15dp</dimen>-->
+<!--    <dimen name="_30sdp">30sp</dimen>-->
+<!--    <dimen name="_10ssp">10sp</dimen>-->
     <dimen name="tvRightAddressMargin">115dp</dimen>
     <dimen name="smallButtonWidth">130dp</dimen>
     <dimen name="smallButtonHeight">55dp</dimen>
@@ -7,15 +37,15 @@
     <dimen name="mediumButtonWidth">200dp</dimen>
     <dimen name="mediumButtonHeight">55dp</dimen>
     <dimen name="edittextHeight">60dp</dimen>
-    <dimen name="editbuttonHeight">40</dimen>
+    <dimen name="editbuttonHeight">40dp</dimen>
     <dimen name="editButtonHeight">40dp</dimen>
     <dimen name="_88sdp">88dp</dimen>
     <dimen name="_64sdp">64dp</dimen>
-    <dimen name="_16sdp" />
+    <dimen name="_16sdp">16dp</dimen>
     <dimen name="_10sdp">10dp</dimen>
     <dimen name="_80sdp">80dp</dimen>
     <dimen name="_11sdp">11dp</dimen>
-    <dimen name="_12ssp">12dp</dimen>
+    <dimen name="_12ssp">12sp</dimen>
     <dimen name="_8sdp">8dp</dimen>
     <dimen name="_83sdp">83dp</dimen>
     <dimen name="_28sdp">28dp</dimen>
@@ -25,4 +55,9 @@
     <dimen name="_45sdp">45dp</dimen>
     <dimen name="_1sdp">1dp</dimen>
     <dimen name="_15ssp">15sp</dimen>
+    <dimen name="_43sdp">43dp</dimen>
+    <dimen name="_2sdp">2dp</dimen>
+    <dimen name="_15sdp">15dp</dimen>
+    <dimen name="_30sdp">30dp</dimen>
+    <dimen name="_10ssp">10sp</dimen>
 </resources>
