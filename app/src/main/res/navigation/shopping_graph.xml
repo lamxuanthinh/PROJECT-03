@@ -96,16 +96,28 @@
             app:argType="com.example.project03.data.CartProduct[]" />
     </fragment>
     <fragment
-
+        android:id="@+id/orderDetailFragment"
+        android:name="com.example.project03.fragments.settings.OrderDetailFragment"
+        android:label="OrderDetailFragment"
+        tools:layout="@layout/fragment_order_detail">
+        <argument
+            android:name="order"
+            app:argType="com.example.project03.data.order.Order" />
+    </fragment>
+    <fragment
         android:id="@+id/ordersFragment"
         android:name="com.example.project03.fragments.settings.OrdersFragment"
         android:label="OrdersFragment"
-        tools:layout="@layout/fragment_orders"/>
+        tools:layout="@layout/fragment_orders">
+        <action
+            android:id="@+id/action_ordersFragment_to_orderDetailFragment"
+            app:destination="@id/orderDetailFragment" />
+    </fragment>
     <fragment
         android:id="@+id/userAccountFragment"
         android:name="com.example.project03.fragments.settings.UserAccountFragment"
         android:label="UserAccountFragment"
-        tools:layout="@layout/fragment_user_account"
-        />
+        tools:layout="@layout/fragment_user_account"/>
+
 
 </navigation>

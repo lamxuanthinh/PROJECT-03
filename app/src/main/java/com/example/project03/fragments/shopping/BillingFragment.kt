@@ -66,7 +66,9 @@ class BillingFragment: Fragment() {
         binding.imageAddAddress.setOnClickListener {
             findNavController().navigate(R.id.action_billingFragment_to_addressFragment)
         }
-
+        binding.imageCloseBilling.setOnClickListener {
+            findNavController().navigateUp()
+        }
         lifecycleScope.launchWhenStarted {
             billingViewModel.address.collectLatest {
                 when(it){
