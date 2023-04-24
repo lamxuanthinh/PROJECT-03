@@ -135,12 +135,12 @@
                         style="@style/MediumTextViewThin"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_15sdp"
                         android:layout_weight="1"
                         android:text="@string/g_all_orders"
                         android:textColor="@color/g_hint"
-                        android:textStyle="bold"
-                        android:layout_marginStart="@dimen/_15sdp"
-                        android:layout_gravity="center_vertical"/>
+                        android:textStyle="bold" />
 
                     <ImageView
                         android:layout_width="@dimen/_15sdp"

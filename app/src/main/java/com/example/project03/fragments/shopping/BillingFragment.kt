@@ -15,7 +15,6 @@ import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.project03.adapters.BillingProductsAdapter
-
 import com.example.project03.R
 import com.example.project03.adapters.AddressAdapter
 import com.example.project03.data.Address
