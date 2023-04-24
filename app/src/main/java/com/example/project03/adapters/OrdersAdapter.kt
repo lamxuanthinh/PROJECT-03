@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.example.project03.R
 import com.example.project03.data.order.Order
 import com.example.project03.data.order.OrderStatus
-import com.example.project03.data.order.getOderStatus
+import com.example.project03.data.order.getOrderStatus
 import com.example.project03.databinding.FragmentBaseCateroryBinding
 import com.example.project03.databinding.OrderItemBinding
 
@@ -23,7 +23,7 @@ class OrdersAdapter : Adapter<OrdersAdapter.OrdersViewHolder>() {
                 tvOrderDate.text = order.date
                 val resources = itemView.resources
 
-                val colorDrawable = when (getOderStatus(order.orderStatus)) {
+                val colorDrawable = when (getOrderStatus(order.orderStatus)) {
                     is OrderStatus.Ordered -> {
                         ColorDrawable(resources.getColor(R.color.g_orange_yellow))
                     }
@@ -79,6 +79,10 @@ class OrdersAdapter : Adapter<OrdersAdapter.OrdersViewHolder>() {
     override fun onBindViewHolder(holder: OrdersViewHolder, position: Int) {
         val order = differ.currentList[position]
         holder.bind(order)
+
+        holder.itemView.setOnClickListener{
+            onClick?.invoke(order)
+        }
     }
 
     var onClick: ((Order) -> Unit)? = null

@@ -11,7 +11,7 @@ sealed class OrderStatus(val status: String) {
 
 }
 
-fun getOderStatus(status: String): OrderStatus{
+fun getOrderStatus(status: String): OrderStatus{
     return when(status){
         "Ordered" -> {
             OrderStatus.Ordered
