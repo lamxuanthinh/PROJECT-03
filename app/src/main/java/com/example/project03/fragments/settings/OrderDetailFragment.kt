@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kelineyt.adapters.BillingProductsAdapter
 import com.example.project03.data.order.OrderStatus
+import com.example.project03.data.order.getOrderStatus
 import com.example.project03.databinding.FragmentOrderDetailBinding
 import com.example.project03.util.VerticalItemDecoration
 
