@@ -47,11 +47,10 @@ class ProfileFragment: Fragment() {
             findNavController().navigate(R.id.action_profileFragment_to_ordersFragment)
         }
         binding.linearBilling.setOnClickListener {
-        //          val action = ProfileFragmentDirections
-        //            .actionProfileFragmentToBillingFragment2(0f,
-//                emptyArray()
-//            )
-//            findNavController().navigate(action)
+            val action=ProfileFragmentDirections.actionProfileFragmentToBillingFragment(0f,
+                emptyArray()
+            )
+            findNavController().navigate(action)
 
         }
         binding.linearOut.setOnClickListener {
