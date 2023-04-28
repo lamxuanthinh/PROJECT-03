@@ -32,7 +32,7 @@ class HomeFragment: Fragment(R.layout.fragment_home) {
             CupboardFragment(),
             TableFragment(),
             AccessoryFragment(),
-            FurnitureFragment()
+            ClothesFragment()
         )
         binding.viewpagerHome.isUserInputEnabled=false
         val viewPager2Adapter = HomeViewpagerAdapter(categoriesFragments, childFragmentManager, lifecycle)
@@ -44,7 +44,7 @@ class HomeFragment: Fragment(R.layout.fragment_home) {
                 2 -> tab.text = "Cupboard"
                 3 -> tab.text = "Table"
                 4 -> tab.text = "Accessory"
-                5 -> tab.text = "Furniture"
+                5 -> tab.text = "Clothes"
             }
         }.attach()
     }
