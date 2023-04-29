@@ -26,7 +26,7 @@ class CartViewModel @Inject constructor(
     val productsPrice = cartProducts.map {
         when(it){
             is Resource.Success -> {
-                calcultePrice(it.data!!)
+                calculatePrice(it.data!!)
             }
             else -> null
         }
@@ -45,7 +45,7 @@ class CartViewModel @Inject constructor(
     }
 
 
-    private fun calcultePrice(data: List<CartProduct>): Any {
+    private fun calculatePrice(data: List<CartProduct>): Float {
         return data.sumByDouble { cartProduct ->
             (cartProduct.product.offerPercentage.getProductPrice(cartProduct.product.price)*cartProduct.quality).toDouble()
         }.toFloat()

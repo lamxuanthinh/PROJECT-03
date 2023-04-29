@@ -36,7 +36,7 @@ class BillingFragment: Fragment() {
 
     private val addressAdapter by lazy { AddressAdapter() }
     private val billingProductsAdapter by lazy { BillingProductsAdapter() }
-    val billingViewModel by viewModels<BillingViewModel>()
+    private val billingViewModel by viewModels<BillingViewModel>()
     private val args by navArgs<BillingFragmentArgs>()
     private var product = emptyList<CartProduct>()
     private var totalPrice = 0f
@@ -152,7 +152,7 @@ class BillingFragment: Fragment() {
 
 
     private fun setupAddressRv() {
-        binding.rvProducts.apply {
+        binding.rvAddress.apply {
             layoutManager = LinearLayoutManager(requireContext(), RecyclerView.HORIZONTAL, false)
             adapter = addressAdapter
             addItemDecoration(HorizontalItemDecoration())
