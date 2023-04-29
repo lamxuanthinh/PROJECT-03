@@ -46,7 +46,6 @@ class CartFragment: Fragment(R.layout.fragment_cart) {
         lifecycleScope.launchWhenStarted {
             viewModel.productsPrice.collectLatest {price ->
                 price?.let {
-                    /*LỖI Ở ĐÂY NHA NHỚ SỬA TRANG ƠI it: Float*/
                     totalPrice = it as Float
                     binding.tvTotalPrice.text = "$ $price"
                 }
@@ -95,7 +94,7 @@ class CartFragment: Fragment(R.layout.fragment_cart) {
                         binding.progressbarCart.visibility = View.VISIBLE
                     }
                     is Resource.Success ->{
-                        binding.progressbarCart.visibility = View.VISIBLE
+                        binding.progressbarCart.visibility = View.INVISIBLE
                         if(it.data!!.isEmpty()){
                             showEmptyCart()
                             hideOtherViews()
@@ -106,7 +105,7 @@ class CartFragment: Fragment(R.layout.fragment_cart) {
                         }
                     }
                     is Resource.Error ->{
-                        binding.progressbarCart.visibility = View.VISIBLE
+                        binding.progressbarCart.visibility = View.INVISIBLE
                         Toast.makeText(requireContext(), it.message, Toast.LENGTH_SHORT).show()
                     }
                     else -> Unit

@@ -152,7 +152,7 @@ class BillingFragment: Fragment() {
 
 
     private fun setupAddressRv() {
-        binding.rvProducts.apply {
+        binding.rvAddress.apply {
             layoutManager = LinearLayoutManager(requireContext(), RecyclerView.HORIZONTAL, false)
             adapter = addressAdapter
             addItemDecoration(HorizontalItemDecoration())

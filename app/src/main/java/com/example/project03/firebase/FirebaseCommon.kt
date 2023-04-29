@@ -52,7 +52,7 @@ class FirebaseCommon(
             onResult(documentId,null)
 
         }.addOnFailureListener {
-            onResult(documentId,it)
+            onResult(null,it)
         }
     }
 

@@ -13,7 +13,7 @@ import com.example.project03.databinding.CartProductItemBinding
 import com.example.project03.helper.getProductPrice
 
 class CartProductAdapter: RecyclerView.Adapter<CartProductAdapter.CartProductsViewHolder>() {
-    inner class CartProductsViewHolder( var binding: CartProductItemBinding): RecyclerView.ViewHolder(binding.root){
+    inner class CartProductsViewHolder( val binding: CartProductItemBinding): RecyclerView.ViewHolder(binding.root){
 
 
         fun blind(cartProduct: CartProduct){
