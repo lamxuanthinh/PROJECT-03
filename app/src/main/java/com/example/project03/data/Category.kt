@@ -5,5 +5,5 @@ sealed class Category(val category:String){
     object Table:Category("Table")
     object Cupboard:Category("Cupboard")
     object Accessory:Category("Accessory")
-    object Furniture:Category("Furniture")
+    object Clothes:Category("Clothes")
     }
