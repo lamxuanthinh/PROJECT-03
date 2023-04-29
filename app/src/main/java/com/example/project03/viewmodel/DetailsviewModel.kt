@@ -46,7 +46,7 @@ class DetailsviewModel @Inject constructor(
             }
 
     }
-    fun addNewProduct(cartProduct: CartProduct){
+    private fun addNewProduct(cartProduct: CartProduct){
         firebaseCommon.addProductToCart(cartProduct){addedProduct,e->
             viewModelScope.launch {
                 if(e==null){
@@ -57,11 +57,11 @@ class DetailsviewModel @Inject constructor(
             }
         }
     }
-    fun increaseQuantity(documentId: String,cartProduct: CartProduct){
+    private fun increaseQuantity(documentId: String,cartProduct: CartProduct){
         firebaseCommon.increaseQuantity(documentId){_,e->
             viewModelScope.launch {
                 if(e==null){
-                    _addToCart.emit(Resource.Success(cartProduct!!))
+                    _addToCart.emit(Resource.Success(cartProduct))
                 }else{
                     _addToCart.emit(Resource.Error(e.message.toString()))
                 }

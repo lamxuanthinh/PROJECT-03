@@ -36,7 +36,7 @@ class BillingFragment: Fragment() {
 
     private val addressAdapter by lazy { AddressAdapter() }
     private val billingProductsAdapter by lazy { BillingProductsAdapter() }
-    val billingViewModel by viewModels<BillingViewModel>()
+    private val billingViewModel by viewModels<BillingViewModel>()
     private val args by navArgs<BillingFragmentArgs>()
     private var product = emptyList<CartProduct>()
     private var totalPrice = 0f

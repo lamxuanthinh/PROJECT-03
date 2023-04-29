@@ -38,10 +38,10 @@
 
         <TextView
             android:id="@+id/tvProductCartName"
-            android:layout_width="180dp"
-            android:layout_height="wrap_content"
+            android:layout_width="230dp"
+            android:layout_height="40sp"
             android:text="Chair"
-            android:textSize="15sp"
+            android:textSize="13sp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:fontFamily="@font/poppins_light"
@@ -55,7 +55,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="$50"
-            android:textSize="10sp"
+            android:textSize="13sp"
             android:textColor="@color/black"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@id/tvProductCartName"
@@ -96,9 +96,14 @@
             android:layout_width="15dp"
             android:layout_height="15dp"
             android:layout_marginTop="5dp"
+            android:layout_marginLeft="@dimen/_20sdp"
             android:src="@color/g_blue"
-            app:layout_constraintStart_toStartOf="@id/tvProductCartPrice"
-            app:layout_constraintTop_toBottomOf="@id/tvProductCartPrice"/>
+            app:layout_constraintStart_toEndOf="@+id/tvProductCartPrice"
+            app:layout_constraintTop_toBottomOf="@id/tvProductCartName"
+
+            />
+       <!-- app:layout_constraintStart_toStartOf="@id/tvProductCartPrice"
+        app:layout_constraintTop_toBottomOf="@id/tvProductCartPrice"-->
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/imageCartProductSize"
             android:layout_width="15dp"
@@ -112,8 +117,8 @@
             android:id="@+id/tvCartProductSize"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="L"
-            android:textSize="11sp"
+            android:text="100"
+            android:textSize="9sp"
             android:textColor="@color/g_white"
             app:layout_constraintBottom_toBottomOf="@id/imageCartProductSize"
             app:layout_constraintTop_toTopOf="@id/imageCartProductSize"
