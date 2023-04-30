@@ -29,7 +29,7 @@
             android:drawableStart="@drawable/pink"
             android:drawablePadding="16dp"
             style="@style/h3"
-            android:text="Blackpink"
+            android:text="Brightpeak"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="@id/guidelineLoginRight"
             app:layout_constraintStart_toStartOf="@+id/guidelineLoginLeft"

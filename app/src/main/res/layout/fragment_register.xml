@@ -24,7 +24,7 @@
         android:layout_marginTop="90dp"
         android:drawableStart="@drawable/pink"
         android:drawablePadding="6dp"
-        android:text="Blackpink"
+        android:text="Brightpeak"
         style="@style/h3"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@id/guideline7"
