@@ -4,8 +4,9 @@
     android:layout_width="150dp"
     android:layout_height="200dp"
     android:background="#40ACA4B6"
+    android:layout_marginLeft="5dp"
     android:layout_marginBottom="20dp"
-    android:layout_marginRight="20dp"
+    android:layout_marginRight="25dp"
     app:elevation="0dp">
 
 
@@ -15,7 +16,7 @@
 
         <ImageView
             android:id="@+id/imgProduct"
-            android:layout_width="150dp"
+            android:layout_width="120dp"
             android:layout_height="100dp"
             android:layout_marginTop="10dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -36,7 +37,7 @@
             <TextView
                 android:id="@+id/tvName"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
                 android:fontFamily="@font/poppins_light"
                 android:text="Chair"
                 android:textColor="@color/black"
@@ -49,7 +50,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:layout_marginEnd="16dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/ic_favorite"
                 app:tint="@color/black" />
@@ -59,12 +59,11 @@
         <TextView
             android:id="@+id/tvNewPrice"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="16dp"
             android:layout_marginTop="3dp"
             android:layout_marginBottom="15dp"
             android:fontFamily="@font/sf_pro_display"
             android:text="$1600"
-            android:textColor="@color/black"
             android:textSize="@dimen/_12ssp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@id/tvPrice"
