@@ -3,9 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="150dp"
     android:layout_height="200dp"
-    android:background="#40ACA4B6"
     android:layout_marginBottom="20dp"
     android:layout_marginRight="20dp"
+    android:background="@drawable/shabe"
     app:elevation="0dp">
 
 
@@ -64,7 +64,7 @@
             android:layout_marginBottom="15dp"
             android:fontFamily="@font/sf_pro_display"
             android:text="$1600"
-            android:textColor="@color/black"
+            android:textColor="#FF4500"
             android:textSize="@dimen/_12ssp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@id/tvPrice"
@@ -79,7 +79,7 @@
             android:layout_marginBottom="15dp"
             android:fontFamily="@font/sf_pro_display"
             android:text="$1600"
-            android:textColor="@color/black"
+            android:textColor="#FF4500"
             android:textSize="@dimen/_12ssp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@id/imgProduct"

@@ -11,7 +11,9 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@drawable/shabe"
+        >
 
         <ImageView
             android:id="@+id/imgSpecialRvItem"
@@ -32,10 +34,10 @@
             app:layout_constraintTop_toTopOf="@id/imgSpecialRvItem"
             android:layout_marginTop="7dp"
             android:layout_marginStart="18dp"
-            android:fontFamily="@font/poppins_thin"
+            android:fontFamily="@font/poppins_light"
             android:textStyle="bold"
             android:textColor="@color/black"
-            android:textSize="17sp"
+            android:textSize="10dp"
             android:maxLines="2"
 
             />
@@ -56,13 +58,13 @@
 
         <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
             android:id="@+id/btn_add_to_card"
-            android:layout_width="77dp"
+            android:layout_width="72dp"
             android:layout_height="25dp"
-            android:background="@drawable/btn_background"
+            android:background="@drawable/btn_mau"
             android:fontFamily="@font/poppins_light"
             android:text="Add to card"
-            android:textColor="@color/white"
-            android:textSize="10sp"
+            android:textColor="@color/g_black"
+            android:textSize="9sp"
             android:textStyle="bold"
             app:layout_constraintTop_toBottomOf="@id/tvSpecialProductPrice"
             android:textAllCaps="false"
