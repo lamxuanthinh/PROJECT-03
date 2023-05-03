@@ -90,19 +90,18 @@ class MainCategoryFragment: Fragment(R.layout.fragment_main_category) {
             }
         }
         lifecycleScope.launchWhenStarted {
-            viewModel.bestProducts.collectLatest {
-                when(it){
-                    is Resource.Loading->{
+            viewModel.bestDealProducts.collectLatest {
+                when (it) {
+                    is Resource.Loading -> {
                         showLoading()
                     }
-                    is Resource.Success->{
-                        bestProductsAdapter.differ.submitList(it.data)
+                    is Resource.Success -> {
+                        bestDealsAdapter.differ.submitList(it.data)
                         hideLoading()
-
                     }
-                    is Resource.Error->{
+                    is Resource.Error -> {
                         hideLoading()
-                        Log.e(TAG,it.message.toString())
+                        Log.e(TAG, it.message.toString())
                         Toast.makeText(requireContext(), it.message, Toast.LENGTH_SHORT).show()
                     }
                     else -> Unit
@@ -111,21 +110,22 @@ class MainCategoryFragment: Fragment(R.layout.fragment_main_category) {
         }
 
         lifecycleScope.launchWhenStarted {
-            viewModel.bestDealProducts.collectLatest {
-                when(it){
-                    is Resource.Loading->{
+            viewModel.bestProducts.collectLatest {
+                when (it) {
+                    is Resource.Loading -> {
                         binding.bestProductsProgressbar.visibility = View.VISIBLE
                     }
-                    is Resource.Success->{
-                        bestDealsAdapter.differ.submitList(it.data)
+                    is Resource.Success -> {
+                        bestProductsAdapter.differ.submitList(it.data)
                         binding.bestProductsProgressbar.visibility = View.GONE
 
 
                     }
-                    is Resource.Error->{
-                        Log.e(TAG,it.message.toString())
+                    is Resource.Error -> {
+                        Log.e(TAG, it.message.toString())
                         Toast.makeText(requireContext(), it.message, Toast.LENGTH_SHORT).show()
                         binding.bestProductsProgressbar.visibility = View.GONE
+
                     }
                     else -> Unit
                 }

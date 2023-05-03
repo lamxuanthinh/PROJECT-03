@@ -1,5 +1,6 @@
 package com.example.project03.adapters
 
+import android.graphics.Paint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.AsyncListDiffer
@@ -11,17 +12,18 @@ import com.example.project03.databinding.BestDealItemBinding
 import com.example.project03.databinding.SpecialRvItemBinding
 
 class BestDealsAdapter:RecyclerView.Adapter<BestDealsAdapter.BestDealsViewHolder>() {
-    inner class BestDealsViewHolder(private var binding: BestDealItemBinding ): RecyclerView.ViewHolder(binding.root){
+    inner class BestDealsViewHolder(private val binding: BestDealItemBinding ): RecyclerView.ViewHolder(binding.root){
 
         fun blind(product: Product){
             binding.apply{
                 Glide.with(itemView).load(product.images[0]).into(imgBestDeal)
                 product.offerPercentage?.let {
                     val remainingPricePercentage=1f-it
-                    val priceAterOffer= remainingPricePercentage*product.price
-                    tvNewPrice.text="$ ${String.format("%.2f",priceAterOffer)}"
+                    val priceAfterOffer= remainingPricePercentage*product.price
+                    tvNewPrice.text="$ ${String.format("%.2f",priceAfterOffer)}"
+                    tvOldPrice.paintFlags=tvOldPrice.paintFlags or Paint.STRIKE_THRU_TEXT_FLAG
                 }
-                tvOldPrice.text="${product.price}"
+                tvOldPrice.text="$ ${product.price}"
                 tvBestDealName.text=product.name
             }
 

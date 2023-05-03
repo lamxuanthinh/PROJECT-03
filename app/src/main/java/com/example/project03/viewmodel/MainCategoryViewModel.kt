@@ -16,7 +16,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class MainCategoryViewModel @Inject constructor(
-    private var firestore:FirebaseFirestore
+    private val firestore:FirebaseFirestore
 ): ViewModel() {
     private val _specialProducts = MutableStateFlow<Resource<List<Product>>>(Resource.Unspecified())
     val specialProduct: StateFlow<Resource<List<Product>>> = _specialProducts
