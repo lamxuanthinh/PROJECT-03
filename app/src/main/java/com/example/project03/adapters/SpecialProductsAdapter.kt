@@ -1,5 +1,6 @@
 package com.example.project03.adapters
 
+import android.graphics.Paint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.AsyncListDiffer
@@ -16,8 +17,14 @@ class SpecialProductsAdapter:RecyclerView.Adapter<SpecialProductsAdapter.Special
         fun blind(product: Product){
             binding.apply {
                 Glide.with(itemView).load(product.images[0]).into(imgSpecialRvItem)
+                product.offerPercentage?.let {
+                    val remainingPricePercentage=1f-it
+                    val priceAfterOffer= remainingPricePercentage*product.price
+                    tvNewSpecialProductPrice.text="$ ${String.format("%.2f",priceAfterOffer)}"
+                    tvSpecialProductPrice.paintFlags=tvSpecialProductPrice.paintFlags or Paint.STRIKE_THRU_TEXT_FLAG
+                }
                 tvSpecialProductName.text=product.name
-                tvSpecialProductPrice.text=product.price.toString()
+                tvSpecialProductPrice.text="$ ${product.price}"
 
             }
         }

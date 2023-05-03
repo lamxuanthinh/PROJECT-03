@@ -13,19 +13,20 @@ import com.example.project03.databinding.ProductRvItemBinding
 import com.example.project03.helper.getProductPrice
 
 class BestProductsAdapter:RecyclerView.Adapter<BestProductsAdapter.BestProductsViewHolder>() {
-    inner class BestProductsViewHolder(private var binding: ProductRvItemBinding): RecyclerView.ViewHolder(binding.root){
+    inner class BestProductsViewHolder(private val binding: ProductRvItemBinding): RecyclerView.ViewHolder(binding.root){
 
         fun blind(product: Product){
             binding.apply{
                     val priceAfterOffer= product.offerPercentage.getProductPrice(product.price)
                     tvNewPrice.text="$ ${String.format("%.2f",priceAfterOffer)}"
-                    tvPrice.paintFlags=tvPrice.paintFlags or Paint.STRIKE_THRU_TEXT_FLAG
+                    tvPrice.paintFlags=tvPrice.paintFlags
+                /*or Paint.STRIKE_THRU_TEXT_FLAG*/
 
                 if(product.offerPercentage==null)
                     tvNewPrice.visibility= View.INVISIBLE
 
                 Glide.with(itemView).load(product.images[0]).into(imgProduct)
-                tvPrice.text="${product.price}"
+                tvPrice.text="$ ${product.price}"
                 tvName.text=product.name
             }
 
