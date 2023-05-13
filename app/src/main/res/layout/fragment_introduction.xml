@@ -13,7 +13,7 @@
         >
 
 
-        <!--<ImageView
+        <ImageView
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:scaleType="centerCrop"
@@ -32,7 +32,7 @@
             app:layout_constraintTop_toTopOf="@id/guidelineEllipseTop"
             app:layout_constraintBottom_toBottomOf="@id/guidelineEllipseBottom"
             android:background="@drawable/ellips"
-            app:layout_constraintDimensionRatio="1:1"/>-->
+            app:layout_constraintDimensionRatio="1:1"/>
 
         <TextView
             android:id="@+id/tvRightAddressForShopping"
@@ -64,14 +64,14 @@
             android:layout_marginTop="25dp"
             />
 
-        <!--<ImageView
+          <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_texture_right"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/guidelineLeftTexture"/>-->
 
-        <!--<androidx.constraintlayout.widget.Guideline
+                <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guidelineLeftTexture"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -80,7 +80,7 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/buttonStart"
-            android:background="#F195B4"
+            android:background="#344BCA"
             android:layout_width="@dimen/smallButtonWidth"
             android:layout_height="@dimen/smallButtonHeight"
             android:text="Start"
@@ -104,7 +104,7 @@
             android:orientation="vertical"
             app:layout_constraintGuide_percent="0.85" />
 
-<!--        <androidx.constraintlayout.widget.Guideline
+        <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guidelineEllipseTop"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

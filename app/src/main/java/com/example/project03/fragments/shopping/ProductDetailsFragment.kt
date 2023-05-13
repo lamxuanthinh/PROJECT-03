@@ -54,6 +54,9 @@ class ProductDetailsFragment:Fragment() {
         bingding.imageClose.setOnClickListener {
             findNavController().navigateUp()
         }
+//        bingding.buttonAddToCart.setOnClickListener {
+//            findNavController().navigate(R.id.homeFragment)
+//        }
 
         sizesAdapter.onItemClick={
             selectedSize = it

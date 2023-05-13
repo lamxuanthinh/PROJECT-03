@@ -24,6 +24,7 @@
         app:layout_constraintTop_toTopOf="@+id/imageShadow"
         app:layout_constraintEnd_toEndOf="@+id/imageShadow"
         app:layout_constraintBottom_toBottomOf="@+id/imageShadow"
+        android:layout_gravity="center"
         android:layout_width="21dp"
         android:layout_height="21dp"/>
     <TextView
@@ -36,6 +37,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/imageColor"
         app:layout_constraintEnd_toEndOf="@+id/imageColor"
         android:text="S"
+        android:layout_gravity="center"
         android:textAlignment="center"
         android:textSize="12sp"
         android:textColor="@color/g_white"

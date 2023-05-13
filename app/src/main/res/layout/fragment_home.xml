@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FF4500">
+    android:background="@color/g_card_background">
     <LinearLayout
         android:id="@+id/homeHeader"
         android:layout_width="match_parent"
@@ -35,7 +35,7 @@
                 android:paddingBottom="10dp"
                 android:singleLine="true"
                 android:text="Search Now"
-                android:textColor="#EC9BC0"
+                android:textColor="@color/g_gray500"
                 android:textSize="15dp"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -45,10 +45,10 @@
                 android:id="@+id/imageView"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
-                app:srcCompat="@drawable/ic_search"
-                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"/>
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_search" />
         </androidx.constraintlayout.widget.ConstraintLayout>
         <View
             android:layout_width="10dp"
@@ -78,7 +78,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:tabRippleColor="@color/white"
-        app:tabSelectedTextColor="#ee5c42"
+        app:tabSelectedTextColor="@color/black"
         app:tabMode="scrollable"
         app:tabTextAppearance="@style/tabLayout_text"
         app:tabIndicator="@null"

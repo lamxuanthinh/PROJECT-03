@@ -10,7 +10,7 @@
         android:id="@+id/toolbar_address"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="#FF4500"
+        android:background="#ffff"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -28,7 +28,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:tint="#D5C4BE" />
+                app:tint="@color/black" />
 
 
             <TextView
@@ -38,7 +38,7 @@
                 android:layout_marginStart="20dp"
                 android:fontFamily="@font/poppins_thin"
                 android:text="@string/g_address"
-                android:textColor="@color/g_card_background"
+                android:textColor="@color/black"
                 android:textSize="20dp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@+id/img_address_close"
