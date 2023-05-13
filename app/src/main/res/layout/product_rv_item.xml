@@ -4,9 +4,6 @@
     android:layout_width="150dp"
     android:layout_height="200dp"
     android:background="@drawable/shabe"
-    android:layout_marginLeft="5dp"
-    android:layout_marginBottom="20dp"
-    android:layout_marginRight="25dp"
     app:elevation="0dp"
     >
 
@@ -66,7 +63,6 @@
             android:layout_marginBottom="15dp"
             android:fontFamily="@font/sf_pro_display"
             android:text="$1600"
-            android:textColor="#FF4500"
             android:textSize="@dimen/_12ssp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@id/tvPrice"
