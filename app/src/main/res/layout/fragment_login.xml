@@ -97,7 +97,7 @@
             style="@style/editText"
             android:layout_width="0dp"
             android:layout_height="50dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="30dp"
             android:hint="  Password"
             android:inputType="textPassword"
             app:layout_constraintEnd_toEndOf="@id/guidelineLoginRight"
