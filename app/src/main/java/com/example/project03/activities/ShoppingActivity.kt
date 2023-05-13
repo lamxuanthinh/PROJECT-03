@@ -25,6 +25,7 @@ class ShoppingActivity : AppCompatActivity() {
         ActivityShoppingBinding.inflate(layoutInflater)
     }
 
+
     val viewModel by viewModels<CartViewModel>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,6 +33,7 @@ class ShoppingActivity : AppCompatActivity() {
 
         val navController  = findNavController(R.id.shoppingHostFragment)
         binding.bottomNavigation.setupWithNavController(navController)
+
 
         lifecycleScope.launchWhenStarted {
             viewModel.cartProducts.collectLatest {

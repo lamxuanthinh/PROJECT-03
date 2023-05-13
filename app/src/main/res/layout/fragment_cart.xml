@@ -10,7 +10,7 @@
         android:layout_height="match_parent">
 
         <androidx.appcompat.widget.Toolbar
-            android:background="#FF4500"
+            android:background="@color/white"
             android:id="@+id/toolbarCart"
             android:layout_width="match_parent"
             android:layout_height="70dp"
@@ -33,7 +33,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:tint="#D5C4BE"/>
+                    app:tint="@color/black"/>
 
 
                 <TextView
@@ -41,8 +41,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="25dp"
                     android:fontFamily="@font/poppins_light"
-                    android:textColor="@color/g_card_background"
-                    android:textSize="25sp"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
                     android:text="  My Cart"
                     app:layout_constraintBottom_toBottomOf="@id/imageCloseCart"
                     app:layout_constraintTop_toTopOf="@id/imageCloseCart"

@@ -76,6 +76,7 @@
         <argument
             android:name="product"
             app:argType="com.example.project03.data.Product" />
+
     </fragment>
     <fragment
         android:id="@+id/addressFragment"

@@ -88,7 +88,7 @@
             app:layout_constraintTop_toTopOf="@id/ed_search"
             app:layout_constraintBottom_toBottomOf="@id/ed_search"
             android:gravity="center"
-            android:text="Cancel"
+            android:text=""
             android:fontFamily="@font/poppins_light"
             android:textColor="#919394"
             android:visibility="visible"
