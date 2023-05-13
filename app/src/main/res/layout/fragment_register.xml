@@ -24,7 +24,7 @@
         android:drawableStart="@drawable/baseline_shopping_cart_24"
         android:drawablePadding="6dp"
         android:text="Brightpeak"
-        android:textColor="@color/black"
+        android:textColor="#E01036"
         android:textSize="25dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@id/guideline7"
