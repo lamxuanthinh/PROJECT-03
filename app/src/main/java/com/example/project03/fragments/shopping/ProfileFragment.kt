@@ -53,6 +53,13 @@ class ProfileFragment: Fragment() {
             findNavController().navigate(action)
 
         }
+        binding.tvContact.setOnClickListener {
+            val action=ProfileFragmentDirections.actionProfileFragmentToBillingFragment(0f,
+                emptyArray()
+            )
+            findNavController().navigate(action)
+
+        }
         binding.linearOut.setOnClickListener {
             viewModel.logout()
             val intent = Intent(requireActivity(), LoginRegisterActivity::class.java)
