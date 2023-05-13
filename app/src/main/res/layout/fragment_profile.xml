@@ -355,7 +355,7 @@
                     android:layout_marginTop="10dp">
 
                     <ImageView
-                        android:layout_width="wrap_content"
+                        android:layout_width="30dp"
                         android:layout_height="@dimen/_30sdp"
                         android:layout_gravity="center_vertical"
                         android:background="@drawable/settings_items_background"
@@ -364,12 +364,12 @@
                         app:tint="@color/white" />
 
                     <TextView
-                        android:id="@+id/tv_help"
+                        android:id="@+id/tv_contact"
                         style="@style/MediumTextViewThin"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="@string/help"
+                        android:text="Contact"
                         android:textColor="@color/g_hint"
                         android:textStyle="bold"
                         android:layout_marginStart="@dimen/_15sdp"
