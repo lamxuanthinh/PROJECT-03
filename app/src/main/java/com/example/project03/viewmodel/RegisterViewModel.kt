@@ -1,6 +1,7 @@
 package com.example.project03.viewmodel
 
 import androidx.lifecycle.ViewModel
+import com.example.project03.data.Admin
 import com.example.project03.data.User
 import com.example.project03.util.*
 import com.example.project03.util.Constants.USER_COLLECTION
@@ -27,6 +28,50 @@ class RegisterViewModel @Inject constructor(
     private val _validation = Channel<RegisterFieldsState>()
     val validation = _validation.receiveAsFlow()
 
+    private val _adregister = MutableStateFlow<Resource<Admin>>(Resource.Unspecified())
+    val adregister: Flow<Resource<Admin>> = _adregister
+
+    fun createAdAccountWithEmailAndPassword(admin: Admin, password: String) {
+
+        if (checkValidationAd(admin, password)) {
+            runBlocking {
+                _adregister.emit(Resource.Loading())
+            }
+            firebaseAuth.createUserWithEmailAndPassword(admin.email, password).addOnSuccessListener {
+                it.user?.let {
+                    saveAdminInfo(it.uid, admin)
+                }
+            }.addOnFailureListener {
+                _adregister.value = Resource.Error(it.message.toString())
+            }
+        } else {
+            val registerFieldsState = RegisterFieldsState(
+                validateEmail(admin.email), validatePassword(password)
+            )
+            runBlocking {
+                _validation.send(registerFieldsState)
+            }
+        }
+    }
+
+    private fun saveAdminInfo(uidAdmin: String, admin: Admin) {
+        db.collection("admin")
+            .document(uidAdmin)
+            .set(admin)
+            .addOnSuccessListener {
+                _adregister.value = Resource.Success(admin)
+            }.addOnFailureListener {
+                _adregister.value = Resource.Error(it.message.toString())
+            }
+    }
+    private fun checkValidationAd(admin: Admin, password: String): Boolean {
+        val emailValidation = validateEmail(admin.email)
+        val passwordValidation = validatePassword(password)
+        val shouldRegister =
+            emailValidation is RegisterValidation.Success && passwordValidation is RegisterValidation.Success
+
+        return shouldRegister
+    }
     fun createAccountWithEmailAndPassword(user: User, password: String) {
 
         if (checkValidation(user, password)) {

@@ -145,6 +145,28 @@
             app:layout_constraintEnd_toEndOf="@id/googleLogin"
             />
 
+        <TextView
+            android:id="@+id/btnLoginAd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Đăng nhập với tư cách admin"
+            android:textSize="26dp"
+            android:layout_marginTop="50dp"
+            app:layout_constraintEnd_toEndOf="@id/guidelineLoginRight"
+            app:layout_constraintStart_toStartOf="@+id/guidelineLoginLeft"
+            app:layout_constraintTop_toBottomOf="@+id/btn_facebook"
+             />
+        <TextView
+            android:id="@+id/btnRegisterAd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chưa có tài khoản Admin"
+            android:textSize="24dp"
+            app:layout_constraintEnd_toEndOf="@id/guidelineLoginRight"
+            app:layout_constraintStart_toStartOf="@+id/guidelineLoginLeft"
+            app:layout_constraintTop_toBottomOf="@+id/btnLoginAd"
+            />
+
         <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
             android:id="@+id/buttonLoginLogin"
             android:background="#F7B1C9"
