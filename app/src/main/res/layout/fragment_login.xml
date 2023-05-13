@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/secondscreen_background"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.loginRegister.LoginFragment">
 
@@ -20,20 +19,20 @@
         android:layout_height="876dp">
 
         <TextView
+
             android:id="@+id/tvAppName"
+            style="@style/h3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="120dp"
-            android:drawableStart="@drawable/ic_kleine_shape"
             android:drawablePadding="16dp"
-            style="@style/h3"
-            android:text="@string/app_name"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/guidelineLoginLeft"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
+            android:textColor="#FF4500"
             android:id="@+id/tvLetsgo"
             style="@style/h4"
             android:layout_width="wrap_content"
@@ -43,8 +42,8 @@
             android:text="Let's Login"
             android:textAlignment="center"
             android:textSize="27sp"
-            app:layout_constraintStart_toStartOf="@id/tvAppName"
             app:layout_constraintEnd_toEndOf="@+id/tvAppName"
+            app:layout_constraintStart_toStartOf="@id/tvAppName"
             app:layout_constraintTop_toBottomOf="@id/tvAppName" />
 
         <TextView
@@ -52,16 +51,17 @@
             style="@style/h2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
             android:gravity="center"
             android:text="Don't have an account? Register"
             android:textAlignment="center"
-            android:layout_marginTop="15dp"
             app:layout_constraintEnd_toEndOf="@+id/tvAppName"
             app:layout_constraintStart_toStartOf="@+id/tvAppName"
             app:layout_constraintTop_toBottomOf="@id/tvLetsgo" />
 
 
         <EditText
+            android:drawableStart="@drawable/baseline_mail_outline_24"
             android:id="@+id/edEmailLogin"
             style="@style/editText"
             android:layout_width="0dp"
@@ -74,6 +74,7 @@
             app:layout_constraintTop_toBottomOf="@+id/tvDontHaveAccount" />
 
         <EditText
+            android:drawableStart="@drawable/baseline_https_24"
             android:id="@+id/edPasswordLogin"
             style="@style/editText"
             android:layout_width="0dp"
@@ -90,10 +91,10 @@
             style="@style/h2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
             android:gravity="center"
             android:text="Forgot Password"
             android:textAlignment="center"
-            android:layout_marginTop="15dp"
             android:textColor="@color/black"
             app:layout_constraintStart_toStartOf="@id/guidelineLoginLeft"
             app:layout_constraintTop_toBottomOf="@id/edPasswordLogin" />
@@ -106,15 +107,16 @@
             android:src="@drawable/ic_facebooklogin"
             app:layout_constraintStart_toStartOf="@id/guidelineLoginLeft"
             app:layout_constraintTop_toBottomOf="@id/buttonLoginLogin" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Facebook"
-            app:layout_constraintStart_toStartOf="@+id/facebookLogin"
-            app:layout_constraintTop_toTopOf="@id/facebookLogin"
             app:layout_constraintBottom_toBottomOf="@id/facebookLogin"
             app:layout_constraintEnd_toEndOf="@id/facebookLogin"
-            />
+            app:layout_constraintStart_toStartOf="@+id/facebookLogin"
+            app:layout_constraintTop_toTopOf="@id/facebookLogin" />
+
         <ImageView
             android:id="@+id/googleLogin"
             android:layout_width="wrap_content"
@@ -123,16 +125,16 @@
             android:src="@drawable/ic_googlelogin"
             app:layout_constraintEnd_toEndOf="@id/guidelineLoginRight"
             app:layout_constraintTop_toBottomOf="@id/buttonLoginLogin" />
+
         <TextView
 
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Google"
-            app:layout_constraintStart_toStartOf="@+id/googleLogin"
-            app:layout_constraintTop_toTopOf="@id/googleLogin"
             app:layout_constraintBottom_toBottomOf="@id/googleLogin"
             app:layout_constraintEnd_toEndOf="@id/googleLogin"
-            />
+            app:layout_constraintStart_toStartOf="@+id/googleLogin"
+            app:layout_constraintTop_toTopOf="@id/googleLogin" />
 
         <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
             android:id="@+id/buttonLoginLogin"
@@ -141,11 +143,11 @@
             android:layout_height="@dimen/mediumButtonHeight"
             android:layout_marginTop="15dp"
             android:text="Login"
+            android:background="@drawable/login"
             app:layout_constraintEnd_toEndOf="@id/guidelineLoginRight"
             app:layout_constraintStart_toStartOf="@+id/guidelineLoginLeft"
             app:layout_constraintTop_toBottomOf="@+id/tvForgotPasswordLogin"
-            app:spinning_bar_color="@color/white"
-            />
+            app:spinning_bar_color="@color/white" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guidelineLoginLeft"

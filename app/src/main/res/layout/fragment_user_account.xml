@@ -15,6 +15,7 @@
             android:id="@+id/toolbarUserAccount"
             android:layout_width="match_parent"
             android:layout_height="70dp"
+            android:background="#FF4500"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -27,14 +28,15 @@
 
                 <ImageView
                     android:id="@+id/imageCloseUserAccount"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:scaleType="centerInside"
-                    android:src="@drawable/ic_close"
+                    app:tint="#D5C4BE"
+                    android:src="@drawable/baseline_arrow_back_24"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:tint="@color/black" />
+                    />
 
 
                 <TextView
@@ -42,8 +44,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="25dp"
                     android:fontFamily="@font/poppins_light"
-                    android:text="My account"
-                    android:textColor="@color/black"
+                    android:text="  My account"
+                    android:textColor="@color/g_card_background"
                     android:textSize="20sp"
                     app:layout_constraintBottom_toBottomOf="@id/imageCloseUserAccount"
                     app:layout_constraintStart_toStartOf="@id/imageCloseUserAccount"
@@ -87,14 +89,14 @@
 
 
         <EditText
+            android:drawableStart="@drawable/baseline_person_24"
             android:id="@+id/edFirstName"
             android:layout_width="0dp"
             android:layout_height="45dp"
             android:layout_marginTop="40dp"
             android:background="@drawable/white_background"
             android:fontFamily="@font/poppins_light"
-            android:gravity="center"
-            android:hint="First Name"
+            android:hint=" First Name"
             android:singleLine="true"
             android:textStyle="bold"
             app:layout_constraintEnd_toStartOf="@+id/rightGuideline"
@@ -102,14 +104,14 @@
             app:layout_constraintTop_toBottomOf="@+id/imageUser" />
 
         <EditText
+            android:drawableStart="@drawable/baseline_person_24"
             android:id="@+id/edLastName"
             android:layout_width="0dp"
             android:layout_height="45dp"
             android:layout_marginTop="15dp"
             android:background="@drawable/white_background"
             android:fontFamily="@font/poppins_light"
-            android:gravity="center"
-            android:hint="Last Name"
+            android:hint=" Last Name"
             android:singleLine="true"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="@id/rightGuideline"
@@ -117,6 +119,7 @@
             app:layout_constraintTop_toBottomOf="@id/edFirstName" />
 
         <EditText
+            android:drawableStart="@drawable/baseline_mail_outline_24"
             android:id="@+id/edEmail"
             android:layout_width="0dp"
             android:layout_height="45dp"
@@ -124,8 +127,7 @@
             android:background="@drawable/white_background"
             android:editable="false"
             android:fontFamily="@font/poppins_light"
-            android:gravity="center"
-            android:hint="Email"
+            android:hint=" Email"
             android:singleLine="true"
             android:textColor="@color/g_gray700"
             app:layout_constraintEnd_toEndOf="@id/rightGuideline"

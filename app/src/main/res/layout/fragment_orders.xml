@@ -8,13 +8,15 @@
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbarAllOrders"
         android:layout_width="0dp"
+        android:background="#FF4500"
         android:layout_height="?actionBarSize"
         app:layout_constraintEnd_toEndOf="@id/guideline2"
-        app:layout_constraintStart_toStartOf="@id/guideline1"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
+
             android:layout_height="match_parent">
 
             <ImageView
@@ -22,11 +24,11 @@
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:scaleType="centerInside"
-                android:src="@drawable/ic_close"
+                android:src="@drawable/baseline_arrow_back_24"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:tint="@color/black" />
+                app:tint="#D5C4BE" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -34,8 +36,9 @@
                 android:layout_marginStart="30dp"
                 android:fontFamily="@font/poppins_light"
                 android:text="All orders"
-                android:textColor="@color/black"
+                android:textColor="@color/g_card_background"
                 android:textSize="20sp"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@id/imageCloseOrders"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -55,7 +58,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.96" />
+        app:layout_constraintGuide_percent="1.0" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_all_orders"

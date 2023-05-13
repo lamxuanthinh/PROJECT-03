@@ -10,6 +10,7 @@
         android:layout_height="match_parent">
 
         <androidx.appcompat.widget.Toolbar
+            android:background="#FF4500"
             android:id="@+id/toolbarCart"
             android:layout_width="match_parent"
             android:layout_height="70dp"
@@ -25,14 +26,14 @@
 
                 <ImageView
                     android:id="@+id/imageCloseCart"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:src="@drawable/ic_close"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/baseline_arrow_back_24"
                     android:scaleType="centerInside"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:tint="@color/g_blue"/>
+                    app:tint="#D5C4BE"/>
 
 
                 <TextView
@@ -40,9 +41,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="25dp"
                     android:fontFamily="@font/poppins_light"
-                    android:textColor="@color/black"
-                    android:textSize="20sp"
-                    android:text="My Cart"
+                    android:textColor="@color/g_card_background"
+                    android:textSize="25sp"
+                    android:text="  My Cart"
                     app:layout_constraintBottom_toBottomOf="@id/imageCloseCart"
                     app:layout_constraintTop_toTopOf="@id/imageCloseCart"
                     app:layout_constraintStart_toStartOf="@id/imageCloseCart"

@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.example.project03.R
 import com.example.project03.adapters.HomeViewpagerAdapter
 import com.example.project03.databinding.FragmentHomeBinding
@@ -34,6 +35,9 @@ class HomeFragment: Fragment(R.layout.fragment_home) {
             AccessoryFragment(),
             ClothesFragment()
         )
+        binding.searchBar.setOnClickListener {
+            findNavController().navigate(R.id.searchFragment)
+        }
         binding.viewpagerHome.isUserInputEnabled=false
         val viewPager2Adapter = HomeViewpagerAdapter(categoriesFragments, childFragmentManager, lifecycle)
         binding.viewpagerHome.adapter = viewPager2Adapter
