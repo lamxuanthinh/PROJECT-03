@@ -37,7 +37,7 @@
             android:layout_marginTop="15dp"
             android:fontFamily="@font/poppins_thin"
             android:text="Best Products"
-            android:textColor="@color/black"
+            android:textColor="#FF4500"
             android:textSize="22sp"
             app:layout_constraintStart_toStartOf="@id/rvOfferProducts"
             app:layout_constraintTop_toBottomOf="@id/rvOfferProducts"

@@ -10,27 +10,28 @@
    <ImageView
        android:layout_width="match_parent"
        android:layout_height="match_parent"
-       android:src="@drawable/da13"
        android:scaleType="centerCrop"
        >
 
    </ImageView>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <TextView
             android:id="@+id/tvAppName"
-            style="@style/h3"
+            style="@style/h4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="120dp"
-            android:drawableStart="@drawable/pink"
+            android:drawableStart="@drawable/baseline_shopping_cart_24"
             android:drawablePadding="6dp"
             android:text="Brightpeak"
             android:textStyle="bold"
-           app:layout_constraintStart_toStartOf="parent"
+            android:textColor="#FF4500"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 
@@ -66,8 +67,8 @@
             android:id="@+id/buttonRegisterAccountOptions"
             android:layout_width="@dimen/mediumButtonWidth"
             android:layout_height="@dimen/mediumButtonHeight"
-            android:background="#F79AB9"
             android:text="Register"
+            android:background="@drawable/login"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@id/tvQuality"
             app:layout_constraintStart_toStartOf="@id/tvQuality"
@@ -78,7 +79,7 @@
             android:id="@+id/buttonLoginAccountOptions"
             android:layout_width="@dimen/mediumButtonWidth"
             android:layout_height="@dimen/mediumButtonHeight"
-            android:background="#F8F0A8"
+            android:background="@color/g_white"
             app:layout_constraintTop_toBottomOf="@id/buttonRegisterAccountOptions"
             app:layout_constraintEnd_toEndOf="@id/tvQuality"
             app:layout_constraintStart_toStartOf="@id/tvQuality"

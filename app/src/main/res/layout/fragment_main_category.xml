@@ -2,11 +2,13 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FAFBFC"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.core.widget.NestedScrollView
-        android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#FAFBFC"
+        android:layout_width="match_parent"
         android:fillViewport="true"
         android:id="@+id/nestedScrollMainCategory">
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -39,7 +41,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/poppins_thin"
-                android:textColor="@color/black"
+                android:textColor="#FF4500"
                 android:text="Best deal"
                 android:textSize="22dp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -62,7 +64,7 @@
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/poppins_thin"
                 android:text="Best product"
-                android:textColor="@color/black"
+                android:textColor="#FF4500"
                 android:textSize="22dp"
                 app:layout_constraintStart_toStartOf="@+id/rvBestDealProducts"
                 app:layout_constraintTop_toBottomOf="@id/rvBestDealProducts"
