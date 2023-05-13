@@ -8,6 +8,7 @@
     >
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@drawable/shabe"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_88sdp">
 
@@ -67,7 +68,7 @@
             android:background="@drawable/btn_background"
             android:fontFamily="@font/poppins_light"
             android:text="See product"
-            android:textColor="@color/white"
+            android:textColor="#1B0404"
             android:textSize="@dimen/_10sdp"
             android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@id/tvBestDealName"
@@ -75,7 +76,7 @@
             android:textAllCaps="false"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginStart="@dimen/_20sdp"
-
+            android:layout_marginTop="20dp"
             />
 
 

@@ -11,11 +11,12 @@
         android:layout_height="match_parent">
 
         <androidx.appcompat.widget.Toolbar
+            android:background="#FF4500"
             android:id="@+id/toolbarBilling"
             android:layout_width="0dp"
             android:layout_height="?actionBarSize"
-            app:layout_constraintEnd_toEndOf="@id/rightGuideline"
-            app:layout_constraintStart_toStartOf="@id/leftGuideline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -23,22 +24,24 @@
                 android:layout_height="match_parent">
                 <ImageView
                     android:id="@+id/imageCloseBilling"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:src="@drawable/ic_close"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
                     android:scaleType="centerInside"
+                    app:tint="#D5C4BE"
+                    android:src="@drawable/baseline_arrow_back_24"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:tint="@color/black" />
+                     />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="25dp"
                     android:fontFamily="@font/poppins_light"
-                    android:text="Billing"
-                    android:textColor="@color/black"
-                    android:textSize="20sp"
+                    android:text="  Billing"
+                    android:textColor="@color/g_card_background"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="@id/imageCloseBilling"
                     app:layout_constraintStart_toStartOf="@id/imageCloseBilling"
                     app:layout_constraintTop_toTopOf="@id/imageCloseBilling" />

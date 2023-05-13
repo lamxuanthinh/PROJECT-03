@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/secondscreen_background"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.loginRegister.LoginFragment">
 
@@ -18,24 +17,24 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/da13"
+
         >
 
         <TextView
+            style="@style/h3"
             android:id="@+id/tvAppName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="120dp"
-            android:drawableStart="@drawable/pink"
             android:drawablePadding="16dp"
-            style="@style/h3"
-            android:text="Brightpeak"
+
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="@id/guidelineLoginRight"
             app:layout_constraintStart_toStartOf="@+id/guidelineLoginLeft"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
+            android:textColor="#FF4500"
             android:id="@+id/tvLetsgo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -43,8 +42,7 @@
             android:gravity="center"
             android:text="Let's Login"
             android:textAlignment="center"
-            android:textSize="27sp"
-            android:textColor="@color/black"
+            android:textSize="30sp"
             android:fontFamily="@font/poppins_thin"
             app:layout_constraintStart_toStartOf="@id/tvAppName"
             app:layout_constraintEnd_toEndOf="@+id/tvAppName"
@@ -67,25 +65,25 @@
 
 
         <EditText
+            android:drawableStart="@drawable/baseline_mail_outline_24"
             android:id="@+id/edEmailLogin"
             style="@style/editText"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_marginTop="30dp"
             android:hint="Email"
-            android:background="@drawable/bg"
             android:inputType="textEmailAddress"
             app:layout_constraintEnd_toEndOf="@id/guidelineLoginRight"
             app:layout_constraintStart_toStartOf="@+id/guidelineLoginLeft"
             app:layout_constraintTop_toBottomOf="@+id/tvDontHaveAccount" />
 
         <EditText
+            android:drawableStart="@drawable/baseline_https_24"
             android:id="@+id/edPasswordLogin"
             style="@style/editText"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_marginTop="20dp"
-            android:background="@drawable/bg"
             android:hint="Password"
             android:inputType="textPassword"
             app:layout_constraintEnd_toEndOf="@id/guidelineLoginRight"
@@ -146,8 +144,8 @@
             />
 
         <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+            android:background="@drawable/login"
             android:id="@+id/buttonLoginLogin"
-            android:background="#F7B1C9"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_marginTop="25dp"
