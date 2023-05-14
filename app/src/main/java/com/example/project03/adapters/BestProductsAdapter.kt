@@ -17,19 +17,22 @@ class BestProductsAdapter:RecyclerView.Adapter<BestProductsAdapter.BestProductsV
 
         fun blind(product: Product){
             binding.apply{
+                Glide.with(itemView).load(product.images[0]).into(imgProduct)
+
+                product.offerPercentage?.let {
                     val priceAfterOffer= product.offerPercentage.getProductPrice(product.price)
                     tvNewPrice.text="$ ${String.format("%.2f",priceAfterOffer)}"
-                    tvPrice.paintFlags=tvPrice.paintFlags
-                /*or Paint.STRIKE_THRU_TEXT_FLAG*/
+                    tvPrice.paintFlags=tvPrice.paintFlags or Paint.STRIKE_THRU_TEXT_FLAG
 
-                if(product.offerPercentage==null)
-                    tvNewPrice.visibility= View.INVISIBLE
-
-                Glide.with(itemView).load(product.images[0]).into(imgProduct)
+                }
                 tvPrice.text="$ ${product.price}"
-                tvName.text=product.name
+                tvName.text = product.name
+                if(product.offerPercentage==null) {
+                    tvNewPrice.visibility = View.INVISIBLE
+                    tvPrice.text = "$ ${product.price}"
+                    tvName.text = product.name
+                }
             }
-
         }
     }
     private val diffCallback= object: DiffUtil.ItemCallback<Product>(){

@@ -11,7 +11,7 @@
         android:layout_height="match_parent">
 
         <androidx.appcompat.widget.Toolbar
-            android:background="@color/white"
+            android:background="#08000000"
             android:id="@+id/toolbarBilling"
             android:layout_width="0dp"
             android:layout_height="?actionBarSize"
@@ -39,8 +39,9 @@
                     android:layout_marginStart="25dp"
                     android:fontFamily="@font/poppins_light"
                     android:text="  Billing"
+                    android:layout_marginTop="5dp"
                     android:textColor="@color/black"
-                    android:textSize="25sp"
+                    android:textSize="22sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="@id/imageCloseBilling"
                     app:layout_constraintStart_toStartOf="@id/imageCloseBilling"
@@ -66,7 +67,7 @@
             android:id="@+id/tvPaymentExplanation"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Keline dose not support virtual payments. You can pay when you receive your order."
+            android:text="Brightpeak dose not support virtual payments. You can pay when you receive your order."
             android:fontFamily="@font/sf_pro_display"
             app:layout_constraintTop_toBottomOf="@id/tvPaymentMethods"
             app:layout_constraintStart_toStartOf="@id/leftGuideline"

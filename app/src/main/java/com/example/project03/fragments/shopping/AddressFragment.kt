@@ -58,7 +58,9 @@ class AddressFragment:Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        binding.imgAddressClose.setOnClickListener {
+            findNavController().navigateUp()
+        }
         binding.apply {
             bottomSave.setOnClickListener {
                 val addresTitle = edAddressTitle.text.toString()

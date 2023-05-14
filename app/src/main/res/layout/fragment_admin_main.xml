@@ -230,11 +230,11 @@
         <TextView
             android:id="@+id/tvshow"
             android:layout_width="wrap_content"
-            android:layout_height="25dp"
+            android:layout_height="29dp"
             android:text="DANH SÁCH ĐANG QUẢN LÍ"
             android:textStyle="bold"
-            android:textSize="22sp"
-            android:layout_marginStart="25dp"
+            android:textSize="13sp"
+            android:layout_marginStart="20dp"
             app:layout_constraintTop_toBottomOf="@+id/infoAdmin"
             app:layout_constraintStart_toEndOf="@id/tvshowad"
             />

@@ -24,17 +24,17 @@
 
         <TextView
             android:id="@+id/tvBestDealName"
-            android:layout_width="@dimen/_80sdp"
-            android:layout_height="wrap_content"
+            android:layout_width="155dp"
+            android:layout_height="45dp"
             android:text="Scotch Premium"
             app:layout_constraintStart_toEndOf="@id/imgBestDeal"
             app:layout_constraintTop_toTopOf="@id/imgBestDeal"
-            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginTop="1dp"
             android:layout_marginStart="@dimen/_11sdp"
             android:fontFamily="@font/poppins_light"
             android:textStyle="bold"
             android:textColor="@color/black"
-            android:textSize="17dp"/>
+            android:textSize="15dp"/>
 
         <TextView
             android:id="@+id/tv_old_price"
@@ -65,10 +65,10 @@
             android:id="@+id/btn_see_product"
             android:layout_width="@dimen/_83sdp"
             android:layout_height="@dimen/_28sdp"
-            android:background="@drawable/btn_background"
+            android:background="@drawable/btn_mau"
             android:fontFamily="@font/poppins_light"
             android:text="See product"
-            android:textColor="#1B0404"
+            android:textColor="#F5F2F2"
             android:textSize="@dimen/_10sdp"
             android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@id/tvBestDealName"
@@ -77,6 +77,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginStart="@dimen/_20sdp"
             android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
             />
 
 

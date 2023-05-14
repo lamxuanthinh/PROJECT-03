@@ -54,11 +54,7 @@ class ProfileFragment: Fragment() {
 
         }
         binding.tvContact.setOnClickListener {
-            val action=ProfileFragmentDirections.actionProfileFragmentToBillingFragment(0f,
-                emptyArray()
-            )
-            findNavController().navigate(action)
-
+            findNavController().navigate(R.id.action_profileFragment_to_contactFragment)
         }
         binding.linearOut.setOnClickListener {
             viewModel.logout()

@@ -115,17 +115,17 @@
                 android:id="@+id/btnUpdate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Update data"
-                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:text="Update"
+
                 />
 
             <Button
                 android:id="@+id/btnDelete"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Delete product"
-                android:layout_marginLeft="10dp">
-
+                android:layout_weight="1"
+                android:text="Delete ">
             </Button>
         </LinearLayout>
 
