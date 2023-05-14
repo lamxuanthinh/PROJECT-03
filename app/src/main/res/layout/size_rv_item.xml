@@ -10,7 +10,7 @@
     >
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/imageShadow"
-        android:layout_width="25dp"
+        android:layout_width="20dp"
         android:layout_height="25dp"
         android:src="#B8D9FA"
         app:layout_constraintStart_toStartOf="parent"
@@ -29,17 +29,17 @@
         android:layout_height="21dp"/>
     <TextView
         android:id="@+id/tvSize"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:src="@drawable/ic_picked"
         app:layout_constraintStart_toStartOf="@+id/imageColor"
         app:layout_constraintTop_toTopOf="@+id/imageColor"
         app:layout_constraintBottom_toBottomOf="@+id/imageColor"
         app:layout_constraintEnd_toEndOf="@+id/imageColor"
-        android:text="S"
+        android:text="XXL"
         android:layout_gravity="center"
-        android:textAlignment="center"
-        android:textSize="12sp"
+        android:gravity="center"
+        android:textSize="8sp"
         android:textColor="@color/g_white"
         />
 </androidx.cardview.widget.CardView>

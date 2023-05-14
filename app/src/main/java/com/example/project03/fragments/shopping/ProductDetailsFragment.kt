@@ -54,9 +54,9 @@ class ProductDetailsFragment:Fragment() {
         bingding.imageClose.setOnClickListener {
             findNavController().navigateUp()
         }
-//        bingding.buttonAddToCart.setOnClickListener {
-//            findNavController().navigate(R.id.homeFragment)
-//        }
+       /*bingding.buttonAddToCart.setOnClickListener {
+        findNavController().navigate(R.id.cartFragment)
+       }*/
 
         sizesAdapter.onItemClick={
             selectedSize = it
@@ -66,6 +66,7 @@ class ProductDetailsFragment:Fragment() {
         }
         bingding.buttonAddToCart.setOnClickListener {
             viewModel.addUpdateProductInCart(CartProduct(product,1,selectedColor,selectedSize))
+            findNavController().navigate(R.id.cartFragment)
         }
         lifecycleScope.launchWhenStarted {
             viewModel.addToCart.collectLatest {

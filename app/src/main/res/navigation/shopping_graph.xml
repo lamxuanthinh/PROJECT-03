@@ -66,6 +66,9 @@
         <action
             android:id="@+id/action_profileFragment_to_billingFragment"
             app:destination="@id/billingFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_contactFragment"
+            app:destination="@id/contactFragment" />
     </fragment>
     <fragment
         android:id="@+id/productDetailsFragment"
@@ -83,6 +86,11 @@
         android:name="com.example.project03.fragments.shopping.AddressFragment"
         android:label="fragment_address"
         tools:layout="@layout/fragment_address" />
+    <fragment
+        android:id="@+id/contactFragment"
+        android:name="com.example.project03.fragments.shopping.ContactFragment"
+        android:label="Contact"
+        tools:layout="@layout/fragment_contact" />
     <fragment
         android:id="@+id/billingFragment"
         android:name="com.example.project03.fragments.shopping.BillingFragment"

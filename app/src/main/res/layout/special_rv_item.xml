@@ -27,14 +27,14 @@
         <TextView
             android:id="@+id/tvSpecialProductName"
             android:layout_width="@dimen/_80sdp"
-            android:layout_height="wrap_content"
+            android:layout_height="35dp"
             android:layout_marginStart="18dp"
             android:layout_marginTop="7dp"
             android:fontFamily="@font/poppins_light"
             android:maxLines="2"
             android:text="Scotch Premium"
             android:textColor="@color/black"
-            android:textSize="10dp"
+            android:textSize="12dp"
             android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@id/imgSpecialRvItem"
             app:layout_constraintTop_toTopOf="@id/imgSpecialRvItem"
@@ -46,9 +46,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/sf_pro_display"
-            android:text="$1600"
+            android:text="$160000"
             android:textColor="@color/g_black"
-            android:textSize="12sp"
+            android:textSize="11sp"
             app:layout_constraintStart_toStartOf="@id/tvSpecialProductName"
             app:layout_constraintTop_toBottomOf="@id/tvSpecialProductName" />
 
@@ -68,15 +68,16 @@
         <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
             android:id="@+id/btn_add_to_card"
             android:layout_width="72dp"
-            android:layout_height="25dp"
+            android:layout_height="22dp"
             android:layout_marginStart="10dp"
             android:background="@drawable/btn_mau"
             android:fontFamily="@font/poppins_light"
             android:text="Add to card"
             android:textAllCaps="false"
-            android:textColor="@color/g_black"
+            android:textColor="@color/g_card_background"
             android:textSize="9sp"
             android:textStyle="bold"
+            android:layout_marginTop="5dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tvSpecialProductPrice" />
 
