@@ -50,20 +50,29 @@
 
             <TextView
                 android:id="@+id/tvProductName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                style="@style/h3"
+                android:layout_width="210dp"
+                android:layout_height="67dp"
+                android:textSize="19dp"
                 android:textStyle="bold"
-                android:text="Lofcoding"/>
+                android:text="Lofcoding "/>
 
             <TextView
                 android:id="@+id/tvProductPrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                style="@style/h3"
+                android:layout_marginRight="1dp"
+                android:textSize="15dp"
                 android:textColor="@color/g_gray700"
-                android:text="$6000"/>
+                android:hint="$600000"/>
+
+            <TextView
+                android:id="@+id/tvNewPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="17dp"
+                android:textColor="#ED3A3A"
+                android:text="$200000"/>
+
 
         </LinearLayout>
         <TextView

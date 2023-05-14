@@ -15,6 +15,9 @@ class BestDealsAdapter:RecyclerView.Adapter<BestDealsAdapter.BestDealsViewHolder
     inner class BestDealsViewHolder(private val binding: BestDealItemBinding ): RecyclerView.ViewHolder(binding.root){
 
         fun blind(product: Product){
+            binding.btnSeeProduct.setOnClickListener {
+                onClick?.invoke(product)
+            }
             binding.apply{
                 Glide.with(itemView).load(product.images[0]).into(imgBestDeal)
                 product.offerPercentage?.let {

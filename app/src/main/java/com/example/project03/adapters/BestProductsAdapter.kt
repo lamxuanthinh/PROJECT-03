@@ -23,13 +23,15 @@ class BestProductsAdapter:RecyclerView.Adapter<BestProductsAdapter.BestProductsV
                     val priceAfterOffer= product.offerPercentage.getProductPrice(product.price)
                     tvNewPrice.text="$ ${String.format("%.2f",priceAfterOffer)}"
                     tvPrice.paintFlags=tvPrice.paintFlags or Paint.STRIKE_THRU_TEXT_FLAG
+
                 }
-
-                if(product.offerPercentage==null)
-                    tvNewPrice.visibility= View.INVISIBLE
-                    tvPrice.text="$ ${product.price}"
-                    tvName.text=product.name
-
+                tvPrice.text="$ ${product.price}"
+                tvName.text = product.name
+                if(product.offerPercentage==null) {
+                    tvNewPrice.visibility = View.INVISIBLE
+                    tvPrice.text = "$ ${product.price}"
+                    tvName.text = product.name
+                }
             }
         }
     }
