@@ -13,7 +13,22 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ImageView
+        <TextView
+            android:id="@+id/tvAppName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="120dp"
+            android:drawableStart="@drawable/ic_kleine_shape"
+            android:drawablePadding="16dp"
+            android:textSize="20dp"
+            android:fontFamily="@font/poppins_light"
+            android:textColor="@color/black"
+            android:text="Brightpeak"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/guideline7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+        <!--<ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
@@ -37,7 +52,7 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@id/guideline7"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent" />-->
 
         <TextView
             android:id="@+id/tv_lets_login"
@@ -47,9 +62,9 @@
             android:gravity="center"
             android:text="Let's Register Admin"
             android:textColor="@color/g_black"
-            android:textSize="27dp"
-            app:layout_constraintEnd_toEndOf="@id/tv_app_name"
-            app:layout_constraintStart_toStartOf="@id/tv_app_name"
+            android:textSize="30dp"
+            app:layout_constraintEnd_toEndOf="@id/tvAppName"
+            app:layout_constraintStart_toStartOf="@id/tvAppName"
             app:layout_constraintTop_toBottomOf="@id/guideline8" />
 
         <TextView
@@ -72,7 +87,7 @@
             android:layout_width="0dp"
             android:layout_height="45dp"
             android:layout_marginTop="30dp"
-            android:background="@drawable/chobanthuy"
+            android:background="@drawable/btn_white_background"
             android:fontFamily="@font/poppins_light"
             android:gravity="center"
             android:hint="First Name"
@@ -87,7 +102,7 @@
             android:layout_width="0dp"
             android:layout_height="45dp"
             android:layout_marginTop="20dp"
-            android:background="@drawable/chobanthuy"
+            android:background="@drawable/btn_white_background"
             android:fontFamily="@font/poppins_light"
             android:gravity="center"
             android:hint="Last Name"
@@ -102,7 +117,7 @@
             android:layout_width="0dp"
             android:layout_height="45dp"
             android:layout_marginTop="20dp"
-            android:background="@drawable/chobanthuy"
+            android:background="@drawable/btn_white_background"
             android:fontFamily="@font/poppins_light"
             android:gravity="center"
             android:hint="Phone"
@@ -118,7 +133,7 @@
             android:layout_width="0dp"
             android:layout_height="45dp"
             android:layout_marginTop="20dp"
-            android:background="@drawable/chobanthuy"
+            android:background="@drawable/btn_white_background"
             android:fontFamily="@font/poppins_light"
             android:gravity="center"
             android:hint="Email"
@@ -133,7 +148,7 @@
             android:layout_width="0dp"
             android:layout_height="45dp"
             android:layout_marginTop="20dp"
-            android:background="@drawable/chobanthuy"
+            android:background="@drawable/btn_white_background"
             android:fontFamily="@font/poppins_light"
             android:gravity="center"
             android:hint="Password"
@@ -150,11 +165,11 @@
             android:layout_width="0dp"
             android:layout_height="45dp"
             android:layout_marginTop="20dp"
-            android:background="#849DA9"
+            android:background="@drawable/blue_background"
             android:fontFamily="@font/poppins_light"
             android:text="Register"
             android:textColor="@color/white"
-            android:textSize="18dp"
+            android:textSize="15dp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="@id/ed_last_name"
             app:layout_constraintStart_toStartOf="@id/ed_last_name"
@@ -178,7 +193,7 @@
             android:layout_height="wrap_content"
             android:text="Facebook"
             android:textStyle="bold"
-            android:fontFamily="@font/poppins_thin"
+            android:fontFamily="@font/poppins_light"
             app:layout_constraintBottom_toBottomOf="@id/btn_facebook"
             app:layout_constraintEnd_toEndOf="@id/btn_facebook"
             app:layout_constraintStart_toStartOf="@id/btn_facebook"
@@ -198,7 +213,7 @@
             android:layout_height="wrap_content"
             android:text="Google"
             android:textStyle="bold"
-            android:fontFamily="@font/poppins_thin"
+            android:fontFamily="@font/poppins_light"
             app:layout_constraintBottom_toBottomOf="@id/btn_google"
             app:layout_constraintEnd_toEndOf="@id/btn_google"
             app:layout_constraintStart_toStartOf="@id/btn_google"
