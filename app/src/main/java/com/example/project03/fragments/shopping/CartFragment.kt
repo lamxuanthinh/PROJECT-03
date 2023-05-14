@@ -51,7 +51,9 @@ class CartFragment: Fragment(R.layout.fragment_cart) {
                 }
             }
         }
-
+        binding.imageCloseCart.setOnClickListener {
+            findNavController().navigateUp()
+        }
         cartAdapter.onProductClick = {
             val  b = Bundle().apply { putParcelable("product",it.product) }
             findNavController().navigate(R.id.action_cartFragment_to_productDetailsFragment,b)

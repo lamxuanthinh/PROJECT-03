@@ -16,7 +16,7 @@ class ShowProductsAdapter () : RecyclerView.Adapter<ShowProductsAdapter.ViewHold
         fun blind(product: Product) {
             Glide.with(itemView).load(product.images[0]).into(binding.imgshow)
             binding.tvproductshow.text = product.name
-            binding.tvcategoryshow.text = "Categry:"+product.category
+            binding.tvcategoryshow.text = "Categry: "+product.category
         }
     }
     private val diffCallback= object: DiffUtil.ItemCallback<Product>(){

@@ -208,7 +208,7 @@ android:background="@drawable/mmm"
             app:layout_constraintStart_toStartOf="@+id/guidelineLoginLeft"
             app:layout_constraintTop_toBottomOf="@+id/tvForgotPasswordLogin"
             />
-        <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+        <!--<br.com.simplepass.loadingbutton.customViews.CircularProgressButton
             android:background="@drawable/login"
             android:id="@+id/btnLoginAd"
             android:layout_width="0dp"
@@ -222,7 +222,7 @@ android:background="@drawable/mmm"
             app:layout_constraintEnd_toEndOf="@id/guidelineLoginRight"
             app:layout_constraintStart_toStartOf="@+id/guidelineLoginLeft"
             app:layout_constraintTop_toBottomOf="@+id/buttonLoginLogin"
-            />
+            />-->
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guidelineLoginLeft"
             android:layout_width="wrap_content"
