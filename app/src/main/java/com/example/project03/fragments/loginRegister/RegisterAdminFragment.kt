@@ -5,6 +5,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
@@ -55,6 +56,7 @@ class RegisterAdminFragment : Fragment() {
                 val password = edPassword.text.toString().trim()
                 viewModel.createAdAccountWithEmailAndPassword(admin, password)
 
+
             }
         }
 
@@ -67,6 +69,9 @@ class RegisterAdminFragment : Fragment() {
                     is Resource.Success -> {
                         Log.d("test ok", it.data.toString())
                         binding.btnRegister.revertAnimation()
+                        Toast.makeText(context, "Register admin Successfully", Toast.LENGTH_LONG).show()
+                        findNavController().navigate(R.id.loginFragment)
+
                     }
                     is Resource.Error -> {
                         Log.e(TAG, it.message.toString())

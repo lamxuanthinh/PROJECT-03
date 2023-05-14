@@ -50,9 +50,12 @@ class SearchFragment:Fragment() {
             findNavController().navigate(R.id.action_searchFragment_to_productDetailsFragment,b)
         }
 
-
+        binding.tvCancel.setOnClickListener {
+            findNavController().navigateUp()
+        }
         binding.edSearch.doOnTextChanged { text, _, _, _ ->
             viewModel.searchProducts("${text.toString()}")
+            binding.tvCancel.visibility=View.VISIBLE
             Log.d(TAG,text.toString())
 
 
