@@ -20,13 +20,41 @@ android:fillViewport="true">
         android:visibility="invisible"
         />
 
+    <LinearLayout
+        android:id="@+id/titleAddProduct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+        <ImageView
+            android:id="@+id/imgclose"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:src="@drawable/ic_close"
+            >
 
+        </ImageView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Product"
+            android:layout_gravity="center"
+            android:textSize="23dp"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/g_red"
+            >
+
+        </TextView>
+    </LinearLayout>
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/productsInfo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="10dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"

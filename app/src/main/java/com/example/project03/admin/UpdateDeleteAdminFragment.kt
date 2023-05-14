@@ -35,7 +35,9 @@ class UpdateDeleteAdminFragment:Fragment() {
 //        var documentId=""
 //        val adapter=ArrayAdapter(this,)
 
-
+        binding.imgclose.setOnClickListener {
+            findNavController().navigateUp()
+        }
         binding.apply {
             val sizeL = productsshow.sizes?.joinToString(", ")
             editTextName.setText(productsshow.name)

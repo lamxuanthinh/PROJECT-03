@@ -33,45 +33,57 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
 
-
-                        <ImageView
+                        <LinearLayout
                             android:id="@+id/imageCloseAdminAccount"
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
-                            android:scaleType="centerInside"
-                            android:src="@drawable/ic_close"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            app:tint="@color/black" />
+                            >
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/ic_close"
+
+                                app:tint="@color/black" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="19dp"
+                                android:text="Log out"
+                                android:textColor="#FF5722"
+                                />
+                        </LinearLayout>
 
 
                         <TextView
                             android:id="@+id/tvtile"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="25dp"
+                            android:layout_marginStart="104dp"
                             android:fontFamily="@font/poppins_light"
-                            android:textStyle="bold"
                             android:text="My account Admin"
                             android:textColor="#D9362D2D"
                             android:textSize="20sp"
+                            android:textStyle="bold"
                             app:layout_constraintBottom_toBottomOf="@id/imageCloseAdminAccount"
                             app:layout_constraintStart_toStartOf="@id/imageCloseAdminAccount"
-                            app:layout_constraintTop_toTopOf="@id/imageCloseAdminAccount" />
+                            app:layout_constraintTop_toTopOf="@id/imageCloseAdminAccount"
+                            app:layout_constraintVertical_bias="0.0" />
 
                         <ImageView
                             android:id="@+id/imgload1"
-                            android:layout_width="match_parent"
+                            android:layout_width="50dp"
                             android:layout_height="30dp"
-                            android:layout_marginStart="280dp"
+                            android:layout_marginStart="216dp"
                             android:scaleType="centerInside"
                             android:src="@drawable/img_3"
                             app:layout_constraintBottom_toBottomOf="@id/tvtile"
                             app:layout_constraintStart_toStartOf="@id/tvtile"
                             app:layout_constraintTop_toTopOf="@id/tvtile"
-                            app:layout_constraintVertical_bias="0.0"
-                             />
+                            app:layout_constraintVertical_bias="1.0" />
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </androidx.appcompat.widget.Toolbar>
