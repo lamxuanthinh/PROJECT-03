@@ -30,32 +30,67 @@ class LoginViewModel @Inject constructor(
 
     fun login(email: String, password: String) {
         viewModelScope.launch { _login.emit(Resource.Loading()) }
-        firebaseAuth.signInWithEmailAndPassword(email, password).addOnSuccessListener {
-            viewModelScope.launch {
-                val currentUser = firebaseAuth.currentUser
-                if (currentUser != null) {
-                    val userId = currentUser.uid
-                    val adminDoc = firestore.collection("user").document(userId).get().await()
-                    if (adminDoc.exists()) {
-                        viewModelScope.launch {
 
-                            _login.emit(Resource.Success(currentUser))
-                        }
-                    } else {
-                        viewModelScope.launch {
-                            _login.emit(Resource.Error("User not found"))
+        if (email.isNotEmpty() && password.isNotEmpty()) {
+            firebaseAuth.signInWithEmailAndPassword(email, password)
+                .addOnSuccessListener { authResult ->
+                    viewModelScope.launch {
+                        val currentUser = firebaseAuth.currentUser
+                        if (currentUser != null) {
+                            val userId = currentUser.uid
+                            val adminDoc = firestore.collection("user").document(userId).get().await()
+                            if (adminDoc.exists()) {
+                                viewModelScope.launch {
+                                    _login.emit(Resource.Success(currentUser))
+                                }
+                            } else {
+                                viewModelScope.launch {
+                                    loginad(email, password)
+                                }
+                            }
+                        } else {
+                            viewModelScope.launch {
+                                _login.emit(Resource.Error("Failed to get current user"))
+                            }
                         }
                     }
                 }
-//                it.user?.let {
-//                    _login.emit(Resource.Success(it))
-//                }
-            }
-        }.addOnFailureListener {
+                .addOnFailureListener { exception ->
+                    viewModelScope.launch {
+                        _login.emit(Resource.Error(exception.message.toString()))
+                    }
+                }
+        } else {
             viewModelScope.launch {
-                _login.emit(Resource.Error(it.message.toString()))
+                _login.emit(Resource.Error("Email or password is empty"))
             }
         }
+//        firebaseAuth.signInWithEmailAndPassword(email, password).addOnSuccessListener {
+//            viewModelScope.launch {
+//                val currentUser = firebaseAuth.currentUser
+//                if (currentUser != null) {
+//                    val userId = currentUser.uid
+//                    val adminDoc = firestore.collection("user").document(userId).get().await()
+//                    if (adminDoc.exists()) {
+//                        viewModelScope.launch {
+//
+//                            _login.emit(Resource.Success(currentUser))
+//                        }
+//                    } else {
+//                        viewModelScope.launch {
+//                            loginad(email, password)
+//                        }
+//                    }
+//                }
+////                it.user?.let {
+////                    _login.emit(Resource.Success(it))
+////                }
+//            }
+//        }.addOnFailureListener {
+//            viewModelScope.launch {
+//                _login.emit(Resource.Error(it.message.toString()))
+//            }
+//        }
     }
 
     fun resetPassword(email: String) {
@@ -89,7 +124,7 @@ class LoginViewModel @Inject constructor(
                         }
                     } else {
                         viewModelScope.launch {
-                            _loginad.emit(Resource.Error("User not found"))
+                            _loginad.emit(Resource.Error("Admin not found"))
                         }
                     }
                 }

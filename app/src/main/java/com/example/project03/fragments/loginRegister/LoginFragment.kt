@@ -49,11 +49,7 @@ class LoginFragment : Fragment() {
                 val password = edPasswordLogin.text.toString()
                 viewModel.login(email, password)
             }
-            btnLoginAd.setOnClickListener {
-                val email = edEmailLogin.text.toString()
-                val password = edPasswordLogin.text.toString()
-                viewModel.loginad(email, password)
-            }
+
         }
 
         binding.tvForgotPasswordLogin.setOnClickListener {

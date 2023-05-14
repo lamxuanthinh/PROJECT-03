@@ -67,7 +67,9 @@ class AddProducstFragment:Fragment() {
                     colorPicker.dismiss()
                 }.show()
         }
-
+        binding.imgclose.setOnClickListener {
+            findNavController().navigateUp()
+        }
         val selectImagesActivityResult =
             registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
                 if (result.resultCode == RESULT_OK) {

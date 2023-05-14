@@ -9,7 +9,30 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            >
+            <ImageView
+                android:id="@+id/imgclose"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:src="@drawable/ic_close"
+                >
 
+            </ImageView>
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Chi tiết sản phẩm"
+               android:layout_gravity="center"
+               android:textSize="23dp"
+               android:layout_marginLeft="20dp"
+               >
+
+           </TextView>
+        </LinearLayout>
         <TextView
             android:text="Name:"
             android:layout_width="match_parent"
@@ -93,12 +116,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Update data"
+                android:layout_marginRight="10dp"
                 />
+
             <Button
                 android:id="@+id/btnDelete"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Delete product">
+                android:text="Delete product"
+                android:layout_marginLeft="10dp">
 
             </Button>
         </LinearLayout>
