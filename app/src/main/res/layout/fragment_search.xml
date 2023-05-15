@@ -83,14 +83,17 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:textSize="@dimen/_15ssp"
+            android:layout_marginLeft="5dp"
             app:layout_constraintStart_toStartOf="@id/guideline3"
             app:layout_constraintEnd_toEndOf="@id/guideline2"
             app:layout_constraintTop_toTopOf="@id/ed_search"
             app:layout_constraintBottom_toBottomOf="@id/ed_search"
+
             android:gravity="center"
             android:text="Cancel"
-            android:fontFamily="@font/poppins_light"
-            android:textColor="#0990D5"
+            android:background="@drawable/search_box_background"
+            android:fontFamily="@font/poppins_thin"
+            android:textColor="#100F0F"
             android:visibility="visible"
             />
 

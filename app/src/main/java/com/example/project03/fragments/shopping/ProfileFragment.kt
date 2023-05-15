@@ -77,6 +77,7 @@ class ProfileFragment: Fragment() {
                             )
                         ).into(binding.imgUser)
                         binding.tvUserName.text = "${it.data.firstName}"
+                        binding.tvEditPersonalDetails.text="${it.data.lastName}"
 
                     }
                     is Resource.Error -> {
