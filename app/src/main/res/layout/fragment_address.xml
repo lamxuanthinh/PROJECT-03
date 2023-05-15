@@ -80,7 +80,7 @@
         android:layout_marginTop="35dp"/>
 
     <EditText
-        android:drawableStart="@drawable/baseline_person_24"
+        android:drawableStart="@drawable/person"
         android:id="@+id/ed_full_name"
         android:layout_width="0dp"
         android:layout_height="@dimen/_45sdp"
@@ -108,7 +108,7 @@
         android:fontFamily="@font/poppins_light"
         android:gravity="start|center_vertical"
         android:hint="  Street"
-        android:paddingStart="20dp"
+        android:paddingStart="25dp"
         android:paddingEnd="20dp"
         android:singleLine="true"
         android:textStyle="bold"
@@ -135,7 +135,7 @@
             android:fontFamily="@font/poppins_light"
             android:gravity="start|center_vertical"
             android:hint="  City"
-            android:paddingStart="20dp"
+            android:paddingStart="25dp"
             android:paddingEnd="20dp"
             android:singleLine="true"
             android:textStyle="bold"
@@ -171,7 +171,7 @@
         android:layout_marginTop="25dp"
         android:gravity="start|center_vertical"
         android:hint="  Phone"
-        android:paddingStart="20dp"
+        android:paddingStart="25dp"
         android:paddingEnd="20dp"
         android:phoneNumber="true"
         android:singleLine="true"
@@ -196,7 +196,7 @@
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_delete"
             android:layout_width="0dp"
-            android:layout_height="@dimen/_40sdp"
+            android:layout_height="40dp"
             android:layout_marginBottom="20dp"
             android:fontFamily="@font/poppins_thin"
             android:text="@string/g_delete"
@@ -223,7 +223,7 @@
             android:textSize="@dimen/_12sdp"
             android:visibility="visible"
             android:layout_weight="1"
-            android:layout_marginStart="10dp"
+
             android:layout_marginEnd="10dp"
             />
 
