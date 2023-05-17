@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/adminMainFragment"
-        android:name="com.example.hotelapplication.fragment.admin.AdminMainFragment"
+        android:name="com.example.project03.admin.AdminMainFragment"
         android:label="AdminMainFragment"
         tools:layout="@layout/fragment_admin_main"
         >
@@ -26,7 +26,7 @@
         />
     <fragment
         android:id="@+id/updateDeleteAdminFragment"
-        android:name="com.example.hotelapplication.fragment.admin.UpdateDeleteAdminFragment"
+        android:name="com.example.project03.admin.UpdateDeleteAdminFragment"
         android:label="UpdateDeleteAdminFragment"
         tools:layout="@layout/fragment_admin_update_delete"
         >

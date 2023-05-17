@@ -1,4 +1,4 @@
-package com.example.hotelapplication.fragment.admin
+package com.example.project03.admin
 
 import android.content.Intent
 import android.graphics.Color
@@ -20,9 +20,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.example.project03.R
 import com.example.project03.activities.LoginRegisterActivity
-import com.example.project03.admin.AdminDataViewModel
-import com.example.project03.admin.AdminViewModel
-import com.example.project03.admin.ShowProductsAdapter
 import com.example.project03.data.Admin
 import com.example.project03.databinding.FragmentAdminMainBinding
 import com.example.project03.dialog.setupBottomSheetDialog
@@ -30,7 +27,7 @@ import com.example.project03.util.Resource
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
 
-private val TAG="AdminShowFragment"
+private val TAG="AdminMainFragment"
 
 @AndroidEntryPoint
 class AdminMainFragment:Fragment() {
@@ -180,6 +177,7 @@ class AdminMainFragment:Fragment() {
                 imageEdit.visibility=View.VISIBLE
                 edFirstName.visibility=View.VISIBLE
                 edLastName.visibility=View.VISIBLE
+                edPhone.visibility=View.VISIBLE
                 edEmail.visibility=View.VISIBLE
                 tvUpdatePassword.visibility=View.VISIBLE
                 buttonSave.visibility=View.VISIBLE
@@ -193,6 +191,7 @@ class AdminMainFragment:Fragment() {
                 imageEdit.visibility=View.INVISIBLE
                 edFirstName.visibility=View.INVISIBLE
                 edLastName.visibility=View.INVISIBLE
+                edPhone.visibility=View.INVISIBLE
                 edEmail.visibility=View.INVISIBLE
                 tvUpdatePassword.visibility=View.INVISIBLE
                 buttonSave.visibility=View.INVISIBLE
