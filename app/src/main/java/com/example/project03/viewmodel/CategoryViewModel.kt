@@ -50,7 +50,7 @@ class CategoryViewModel  constructor(
         }
         firestore.collection("Products")
             .whereEqualTo("category",category.category)
-            .whereEqualTo("offerPercentage",null).get().addOnSuccessListener{
+            .whereNotEqualTo("offerPercentage",null).get().addOnSuccessListener{
 
                 val products= it.toObjects(Product::class.java)
                 viewModelScope.launch {
