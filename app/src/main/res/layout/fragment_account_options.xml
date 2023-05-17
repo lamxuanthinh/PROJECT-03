@@ -10,7 +10,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/secondscreen_background"
+        android:src="@drawable/hong"
         android:scaleType="centerCrop"
         >
 
@@ -22,17 +22,18 @@
 
         <TextView
             android:id="@+id/tvAppName"
-            style="@style/h3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="120dp"
-            android:drawableStart="@drawable/ic_kleine_shape"
-            android:drawablePadding="6dp"
+            android:layout_marginTop="100dp"
+            android:drawablePadding="16dp"
+            android:drawableStart="@drawable/p"
             android:text="Brightpeak"
+            android:textColor="#E01036"
+            android:textSize="25dp"
             android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/tvRightAddressForShopping"

@@ -80,7 +80,7 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/buttonStart"
-            android:background="#344BCA"
+            android:background="#E75F76"
             android:layout_width="@dimen/smallButtonWidth"
             android:layout_height="@dimen/smallButtonHeight"
             android:text="Start"

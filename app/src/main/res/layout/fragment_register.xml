@@ -9,24 +9,24 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        android:src="@drawable/secondscreen_background"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/hong"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
-
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/tv_app_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="90dp"
-        android:drawableStart="@drawable/ic_kleine_shape"
-        android:drawablePadding="5dp"
-        android:fontFamily="@font/poppins_light"
+        android:layout_marginTop="95dp"
+        android:drawableStart="@drawable/p"
+        android:drawablePadding="6dp"
         android:text="Brightpeak"
-        android:textColor="@color/g_black"
-        android:textSize="20dp"
+        android:textColor="#E01036"
+        android:textSize="25dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@id/guideline7"
         app:layout_constraintEnd_toEndOf="parent"
@@ -40,7 +40,7 @@
         android:gravity="center"
         android:text="Let's Register"
         android:textColor="@color/g_black"
-        android:textSize="30dp"
+        android:textSize="27dp"
         app:layout_constraintEnd_toEndOf="@id/tv_app_name"
         app:layout_constraintStart_toStartOf="@id/tv_app_name"
         app:layout_constraintTop_toBottomOf="@id/guideline8" />
@@ -61,14 +61,13 @@
         app:layout_constraintTop_toBottomOf="@id/tv_lets_login" />
 
     <EditText
+        android:drawableStart="@drawable/baseline_person_24"
         android:id="@+id/ed_first_name"
         android:layout_width="0dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/btn_white_background"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/poppins_light"
-        android:gravity="center"
-        android:hint="First Name"
+        android:hint="  First Name"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@id/guideline2"
         app:layout_constraintStart_toStartOf="@id/guideline1"
@@ -76,14 +75,13 @@
         android:singleLine="true"/>
 
     <EditText
+        android:drawableStart="@drawable/baseline_supervisor_account_24"
         android:id="@+id/ed_last_name"
         android:layout_width="0dp"
-        android:layout_height="45dp"
+        android:layout_height="50dp"
         android:layout_marginTop="10dp"
-        android:background="@drawable/btn_white_background"
         android:fontFamily="@font/poppins_light"
-        android:gravity="center"
-        android:hint="Last Name"
+        android:hint="  Last Name"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@id/guideline2"
         app:layout_constraintStart_toStartOf="@id/guideline1"
@@ -91,14 +89,13 @@
         android:singleLine="true"/>
 
     <EditText
+        android:drawableStart="@drawable/baseline_mail_outline_24"
         android:id="@+id/ed_email"
         android:layout_width="0dp"
-        android:layout_height="45dp"
+        android:layout_height="50dp"
         android:layout_marginTop="10dp"
-        android:background="@drawable/btn_white_background"
         android:fontFamily="@font/poppins_light"
-        android:gravity="center"
-        android:hint="Email"
+        android:hint="  Email"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@id/guideline2"
         app:layout_constraintStart_toStartOf="@id/guideline1"
@@ -106,14 +103,13 @@
         android:singleLine="true"/>
 
     <EditText
+        android:drawableStart="@drawable/baseline_https_24"
         android:id="@+id/ed_password"
         android:layout_width="0dp"
-        android:layout_height="45dp"
+        android:layout_height="50dp"
         android:layout_marginTop="10dp"
-        android:background="@drawable/btn_white_background"
         android:fontFamily="@font/poppins_light"
-        android:gravity="center"
-        android:hint="Password"
+        android:hint="  Password"
         android:password="true"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@id/guideline2"
@@ -127,23 +123,25 @@
         android:layout_width="0dp"
         android:layout_height="45dp"
         android:layout_marginTop="20dp"
-        android:background="@drawable/btn_background"
+        android:background="#E75F76"
         android:fontFamily="@font/poppins_light"
         android:text="Register"
         android:textColor="@color/white"
-        android:textSize="12dp"
+        android:textSize="18dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@id/ed_last_name"
         app:layout_constraintStart_toStartOf="@id/ed_last_name"
         app:layout_constraintTop_toBottomOf="@id/ed_password"
-        tools:ignore="MissingClass" />
+        tools:ignore="MissingClass"
+        app:spinning_bar_color="@color/white"
+        />
 
 
     <ImageView
         android:id="@+id/btn_facebook"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="25dp"
         android:src="@drawable/ic_facebook_login"
         app:layout_constraintStart_toStartOf="@id/guideline1"
         app:layout_constraintTop_toBottomOf="@id/btn_register" />
@@ -152,6 +150,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Facebook"
+        android:textStyle="bold"
+        android:fontFamily="@font/poppins_light"
         app:layout_constraintBottom_toBottomOf="@id/btn_facebook"
         app:layout_constraintEnd_toEndOf="@id/btn_facebook"
         app:layout_constraintStart_toStartOf="@id/btn_facebook"
@@ -161,7 +161,7 @@
         android:id="@+id/btn_google"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="25dp"
         android:src="@drawable/ic_google_login"
         app:layout_constraintEnd_toEndOf="@id/guideline2"
         app:layout_constraintTop_toBottomOf="@id/btn_register" />
@@ -170,6 +170,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Google"
+        android:textStyle="bold"
+        android:fontFamily="@font/poppins_light"
         app:layout_constraintBottom_toBottomOf="@id/btn_google"
         app:layout_constraintEnd_toEndOf="@id/btn_google"
         app:layout_constraintStart_toStartOf="@id/btn_google"
@@ -187,21 +189,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.89" />
+        app:layout_constraintGuide_percent="0.91" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.14" />
+        app:layout_constraintGuide_percent="0.17" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.1751026" />
+        app:layout_constraintGuide_percent="0.20" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

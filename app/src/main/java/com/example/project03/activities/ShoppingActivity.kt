@@ -44,7 +44,7 @@ class ShoppingActivity : AppCompatActivity() {
                         val bottomNavigation = findViewById<BottomNavigationView>(R.id.bottomNavigation)
                         bottomNavigation.getOrCreateBadge(R.id.cartFragment).apply {
                             number = count
-                            backgroundColor = resources.getColor(R.color.g_blue)
+                            backgroundColor = resources.getColor(R.color.g_pink)
                         }
                     }
                     else -> Unit
