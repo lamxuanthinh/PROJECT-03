@@ -88,7 +88,7 @@
         app:layout_constraintStart_toStartOf="parent"/>
 
     <androidx.viewpager2.widget.ViewPager2
-        android:background="#FAFBFC"
+        android:background="@color/white"
         android:id="@+id/viewpagerHome"
         android:layout_width="0dp"
         android:layout_height="0dp"

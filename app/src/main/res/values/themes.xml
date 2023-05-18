@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
     <style name="Theme.Project03" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">#EE7EA4</item>
+        <item name="colorPrimary">#3B53DA</item>
         <item name="colorPrimaryVariant">#F3F5A8C3</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->

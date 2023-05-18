@@ -48,8 +48,7 @@
                     android:text="  My account"
                     android:textColor="@color/black"
                     android:textStyle="bold"
-                    android:textSize="20sp"
-                    app:layout_constraintBottom_toBottomOf="@id/imageCloseUserAccount"
+                    android:textSize="20dp"
                     app:layout_constraintStart_toStartOf="@id/imageCloseUserAccount"
                     app:layout_constraintTop_toTopOf="@id/imageCloseUserAccount" />
 
@@ -91,7 +90,7 @@
 
 
         <EditText
-            android:drawableStart="@drawable/baseline_person_24"
+
             android:id="@+id/edFirstName"
             android:layout_width="0dp"
             android:layout_height="45dp"
@@ -101,12 +100,13 @@
             android:hint="  First Name"
             android:singleLine="true"
             android:textStyle="bold"
+            android:gravity="center"
             app:layout_constraintEnd_toStartOf="@+id/rightGuideline"
             app:layout_constraintStart_toStartOf="@+id/leftGuideline"
             app:layout_constraintTop_toBottomOf="@+id/imageUser" />
 
         <EditText
-            android:drawableStart="@drawable/baseline_supervisor_account_24"
+            android:gravity="center"
             android:id="@+id/edLastName"
             android:layout_width="0dp"
             android:layout_height="45dp"
@@ -121,7 +121,7 @@
             app:layout_constraintTop_toBottomOf="@id/edFirstName" />
 
         <EditText
-            android:drawableStart="@drawable/baseline_mail_outline_24"
+            android:gravity="center"
             android:id="@+id/edEmail"
             android:layout_width="0dp"
             android:layout_height="45dp"
@@ -154,13 +154,15 @@
             android:text="Save"
             android:textAllCaps="false"
             android:textColor="@color/white"
-            android:textSize="12sp"
+            android:textSize="15dp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginLeft="65dp"
+            android:layout_marginRight="65dp"
+            android:layout_marginTop="40dp"
             app:layout_constraintEnd_toEndOf="@id/rightGuideline"
             app:layout_constraintStart_toStartOf="@id/leftGuideline"
             app:layout_constraintTop_toBottomOf="@+id/tvUpdatePassword"
-            android:layout_marginBottom="20dp"/>
+            android:layout_marginBottom="0dp"/>
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/leftGuideline"

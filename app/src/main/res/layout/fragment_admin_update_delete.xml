@@ -33,85 +33,82 @@
 
            </TextView>
         </LinearLayout>
-        <TextView
-            android:text="Name:"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+
 
         <EditText
+            android:layout_marginTop="10dp"
+            android:textSize="20dp"
             android:id="@+id/editTextName"
-            android:hint="Enter name"
+            android:hint=" Enter name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
-        <TextView
-            android:text="Category:"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="16dp"/>
+
 
         <EditText
+            android:layout_marginTop="10dp"
+            android:textSize="20dp"
             android:id="@+id/editTextCategory"
-            android:hint="Enter Category"
+            android:hint=" Enter Category"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
-        <TextView
-            android:text="Price:"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="16dp"/>
+
 
         <EditText
+            android:layout_marginTop="10dp"
+            android:textSize="20dp"
             android:id="@+id/editTextPrice"
-            android:hint="Enter price"
+            android:hint=" Enter price"
             android:inputType="numberDecimal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
-        <TextView
-            android:text="Offer Percentage:"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="16dp"/>
+
 
         <EditText
+            android:layout_marginTop="10dp"
+            android:textSize="20dp"
             android:id="@+id/editTextOfferPercentage"
-            android:hint="Enter offer percentage"
+            android:hint=" Enter offer percentage"
             android:inputType="numberDecimal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
-        <TextView
-            android:text="Product Description:"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="16dp"/>
+
 
         <EditText
+            android:layout_marginTop="10dp"
+            android:textSize="20dp"
             android:id="@+id/editTextDescription"
-            android:hint="Enter description"
+            android:hint=" Enter description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
         <TextView
+            android:layout_marginTop="10dp"
+            android:textSize="20dp"
             android:id="@+id/edProductDetails"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Product details:"
+            android:layout_marginLeft="10dp"
             android:textColor="@color/black"
-            android:textSize="18sp"
             android:textStyle="bold" />
 
         <EditText
+            android:layout_marginLeft="10dp"
             android:id="@+id/edSizes"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Sizes (Optional) | use , between each new size"
             android:inputType="text" />
         <LinearLayout
+            android:layout_marginTop="26dp"
+            android:textSize="35dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal">
             <Button
+                android:layout_marginRight="25dp"
                 android:id="@+id/btnUpdate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -121,6 +118,7 @@
                 />
 
             <Button
+                android:layout_marginLeft="25dp"
                 android:id="@+id/btnDelete"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
