@@ -72,7 +72,7 @@
             android:layout_marginStart="10dp"
             android:background="@drawable/btn_mau"
             android:fontFamily="@font/poppins_light"
-            android:text="Add to card"
+            android:text="See to card"
             android:textAllCaps="false"
             android:textColor="@color/g_card_background"
             android:textSize="9sp"

@@ -15,6 +15,9 @@ class SpecialProductsAdapter:RecyclerView.Adapter<SpecialProductsAdapter.Special
 
 
         fun blind(product: Product){
+            binding.btnAddToCard.setOnClickListener {
+                onClick?.invoke(product)
+            }
             binding.apply {
                 Glide.with(itemView).load(product.images[0]).into(imgSpecialRvItem)
                 product.offerPercentage?.let {
@@ -29,6 +32,7 @@ class SpecialProductsAdapter:RecyclerView.Adapter<SpecialProductsAdapter.Special
             }
         }
     }
+
 
     private val diffCallback= object: DiffUtil.ItemCallback<Product>(){
         override fun areItemsTheSame(oldItem: Product, newItem: Product): Boolean {
