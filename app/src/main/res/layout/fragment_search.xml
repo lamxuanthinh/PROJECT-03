@@ -10,89 +10,40 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imhome"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/baseline_arrow_back_24"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/black" />
+
         <EditText
             android:id="@+id/ed_search"
             android:layout_width="0dp"
-            android:layout_height="@dimen/_40sdp"
+            android:layout_height="50dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="25dp"
             android:background="@drawable/search_box_background"
+            android:drawableEnd="@drawable/ic_search"
+            android:drawablePadding="10dp"
             android:fontFamily="@font/poppins_thin"
             android:gravity="center_vertical"
             android:hint="Search Now"
             android:paddingStart="@dimen/_12sdp"
             android:singleLine="true"
             android:textColor="@color/g_icon_tint"
-            android:textSize="@dimen/_12ssp"
-            app:layout_constraintEnd_toEndOf="@id/guideline3"
-            android:layout_marginTop="7dp"
+            android:textSize="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@id/guideline1"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0"
-            android:drawableEnd="@drawable/ic_search"
-            android:drawablePadding="10dp"
-            />
-
-
-        <FrameLayout
-            android:id="@+id/frame_scan"
-            android:layout_width="0dp"
-            android:layout_height="@dimen/_40sdp"
-            android:background="@drawable/favorite_background"
-            android:backgroundTint="@color/g_search_and_icons"
-            android:orientation="vertical"
-            app:layout_constraintTop_toTopOf="@id/ed_search"
-            app:layout_constraintBottom_toBottomOf="@id/ed_search"
-            app:layout_constraintStart_toEndOf="@id/guideline3"
-            app:layout_constraintEnd_toEndOf="@id/guideline8"
-            android:layout_marginStart="5dp"
-            android:layout_marginEnd="5dp"
-            app:layout_constraintVertical_bias="0.533">
-
-            <ImageView
-                android:id="@+id/img_scan"
-                android:layout_width="@dimen/_15sdp"
-                android:layout_height="11dp"
-                android:layout_gravity="center"
-                android:src="@drawable/ic_scan" />
-        </FrameLayout>
-
-        <FrameLayout
-            android:id="@+id/fragme_microhpone"
-            android:layout_width="0dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="5dp"
-            android:background="@drawable/favorite_background"
-            android:backgroundTint="@color/g_search_and_icons"
-            android:orientation="vertical"
-            app:layout_constraintBottom_toBottomOf="@id/ed_search"
-            app:layout_constraintEnd_toEndOf="@id/guideline2"
-            app:layout_constraintStart_toEndOf="@id/guideline8"
-            app:layout_constraintTop_toTopOf="@id/ed_search">
-
-            <ImageView
-                android:id="@+id/img_mic"
-                android:layout_width="@dimen/_15sdp"
-                android:layout_height="@dimen/_15sdp"
-                android:layout_gravity="center"
-                android:src="@drawable/ic_microphone" />
-
-        </FrameLayout>
-
-        <TextView
-            android:id="@+id/tv_cancel"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:textSize="@dimen/_15ssp"
-            app:layout_constraintStart_toStartOf="@id/guideline3"
-            app:layout_constraintEnd_toEndOf="@id/guideline2"
-            app:layout_constraintTop_toTopOf="@id/ed_search"
-            app:layout_constraintBottom_toBottomOf="@id/ed_search"
-            android:gravity="center"
-            android:text="Cancel"
-            android:fontFamily="@font/poppins_light"
-            android:textColor="#0990D5"
-            android:visibility="visible"
-            />
+            app:layout_constraintTop_toTopOf="parent" />
 
 
         <androidx.recyclerview.widget.RecyclerView

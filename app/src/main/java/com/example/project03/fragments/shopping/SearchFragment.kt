@@ -50,12 +50,12 @@ class SearchFragment:Fragment() {
             findNavController().navigate(R.id.action_searchFragment_to_productDetailsFragment,b)
         }
 
-        binding.tvCancel.setOnClickListener {
+        binding.imhome.setOnClickListener {
             findNavController().navigateUp()
         }
         binding.edSearch.doOnTextChanged { text, _, _, _ ->
             viewModel.searchProducts("${text.toString()}")
-            binding.tvCancel.visibility=View.VISIBLE
+            binding.imhome.visibility=View.VISIBLE
             Log.d(TAG,text.toString())
 
 
@@ -70,7 +70,7 @@ class SearchFragment:Fragment() {
 
                         if (result.data.isNullOrEmpty()){
                             binding.tvThongbao.visibility = View.VISIBLE
-                            binding.tvCancel.visibility = View.VISIBLE
+                            binding.imhome.visibility = View.VISIBLE
                             binding.progressbarCategories.visibility = View.GONE
                         } else {
                             searchAdapter.differ.submitList(result.data)

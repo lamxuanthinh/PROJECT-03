@@ -62,6 +62,7 @@ class AdminMainFragment:Fragment() {
 
 
         showproductsAdapter= ShowProductsAdapter()
+
         binding.tvshowad.setOnClickListener {
            findNavController().navigate(R.id.action_adminMainFragment_to_addProducstFragment)
         }
